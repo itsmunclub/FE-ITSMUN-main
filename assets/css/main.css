@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  @apply bg-[#ECECEC] dark:bg-dark-bg;
+}
+
+h4,
+.h4 {
+  @apply text-sm text-black/50 uppercase dark:text-dark-accent;
+}
+
+h5,
+.h5 {
+  @apply text-2xl md:text-2xl font-bold text-[#164249]/75 hover:tracking-widest duration-1000 ease-in-out dark:text-dark-text;
+}
+
+h3,
+.h3 {
+  @apply text-6xl font-bold  text-[#164249] dark:text-dark-text;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
