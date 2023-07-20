@@ -19,12 +19,32 @@ h4,
 
 h5,
 .h5 {
-  @apply text-2xl md:text-2xl font-bold text-[#164249]/75 hover:tracking-widest duration-1000 ease-in-out dark:text-dark-text;
+  @apply text-2xl md:text-2xl font-bold text-[#272F35] hover:tracking-widest duration-1000 ease-in-out dark:text-dark-text;
 }
 
 h3,
 .h3 {
-  @apply text-6xl font-bold  text-[#164249] dark:text-dark-text;
+  @apply text-3xl font-bold  text-[#272F35] dark:text-dark-text;
+}
+
+h2,
+.h2 {
+  @apply text-4xl font-bold text-[#272F35] dark:text-dark-text;
+}
+
+h1,
+.h1 {
+  @apply text-6xl font-bold text-[#272F35] dark:text-dark-text;
+}
+
+p,
+.p {
+  @apply text-[#272F35] dark:text-dark-text;
+}
+
+ul,
+.ul {
+  @apply text-[#272F35] dark:text-dark-text
 }
 
 .page-enter-active,

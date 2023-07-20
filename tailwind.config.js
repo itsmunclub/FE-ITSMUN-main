@@ -51,9 +51,10 @@ module.exports = {
 
       colors: {
         primary: '#164249',
-        'dark-bg': '#221F1F',
+        'dark-bg': '#272F35',
+        'light-bg': '#E4E6E8',
         'dark-accent': '#57CA85',
-        'dark-text': '#EAEBEB',
+        'dark-text': '#E4E6E8',
       },
     },
   },
