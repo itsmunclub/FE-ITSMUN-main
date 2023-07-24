@@ -1,5 +1,5 @@
 <template>
-  <div class="w-auto h-full relative lg:mx-20">
+  <div class="w-auto h-full relative mx-10 lg:mx-20">
     <!-- <nuxt-link to="/">
       <div
         :class="{
@@ -153,7 +153,7 @@
       </div>
     </div>
 
-    <div class="w-full mx-auto my-6">
+    <div class="w-full mx-auto my-6 font-bold">
       <ul id="timeline" class="steps steps-horizontal w-full">
         <li class="step step-success"><p class="px-2">Roll Call</p></li>
         <li class="step step-success"><p class="px-2">General Speaker's List</p></li>

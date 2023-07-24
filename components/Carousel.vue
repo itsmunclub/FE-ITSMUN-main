@@ -35,7 +35,6 @@
                 <a href="#slide1" class="btn btn-circle">❯</a>
             </div>
         </div>
-        <img class="w-44 h-w-44 lg:bottom-52 lg:right-10" src="../assets/flower.svg" alt="">
     </div>
 </template>
 

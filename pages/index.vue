@@ -45,13 +45,17 @@
       <div class="lg:hidden mx-auto py-12">
         <img class="rounded-xl" src="../assets/blog-img.svg" alt="">
       </div>
-      <div class="flex flex-col">
-        <p>Written by Bayu Prayogo</p>
-        <h1 id="mun101" style="text-decoration-skip-ink: none" class="relative bg-transparent dark:text-dark-text text-start dark:decoration-dark-accent decoration-[#FFAFAF] text-6xl tracking-wide font-bold leading-tight text-primary">
-          MUN 101
-        </h1>
+      <div class="flex flex-col pr-8">
+        <div class="relative">
+          <p>Written by Bayu Prayogo</p>
+          <h1 id="mun101" style="text-decoration-skip-ink: none" class="relative bg-transparent dark:text-dark-text text-start dark:decoration-dark-accent decoration-[#FFAFAF] text-6xl tracking-wide font-bold leading-tight text-primary">
+            MUN 101
+          </h1>
+          <img class="absolute scale-150 right-12 top-1" src="../assets/index101-1.png" alt="">
+          <img class="absolute scale-150 right-3 top-10" src="../assets/index101-2.png" alt="">
+        </div>
   
-        <p class="text-primary dark:text-dark-text text-sm lg:text-2xl font-medium text-justify lg:w-[52rem] pt-3 leading-relaxed">
+        <p class="text-primary dark:text-dark-text lg:text-2xl font-medium text-justify lg:w-[52rem] pt-3 leading-relaxed">
           For almost 3 years ITS MUN Club has been found Many of them turned their backs away because “MUN is complicated,” Most of them quit because “there are too much rules,” they are missing out. For this reason, we have gathered our three years worth of knowledge to provide everything you need to know about MUN in “MUN 101” article.
         </p>
   

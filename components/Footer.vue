@@ -21,7 +21,7 @@
         
       </div>
     </div>
-    <div class="pt-32 pb-16 mx-5 dark:bg-[#E4E6E8]">
+    <div class="pt-32 pb-16 lg:mr-10 lg:ml-20 mx-5 dark:bg-dark-bg dark:text-dark-text">
       <div class="flex flex-col lg:flex-row gap-10 justify-center w-full items-center">
         <!-- <h1 class="text-2xl font-bold text-white">ValiantVenture.</h1> -->
         <div class="flex flex-row gap-10">

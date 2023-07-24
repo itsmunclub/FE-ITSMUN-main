@@ -7,8 +7,8 @@
           <div class="pb-20 pt-10 px-4 flex flex-col gap-10 mx-10"> <!-- buat setiap page kasih mx-10 -->
             <SwitchLight @isDarkMode="switchLight" />
             <!-- <Supporters v-lazy-load /> -->
-            <Nuxt v-lazy-load />
           </div>
+          <Nuxt v-lazy-load />
           <FooterNoCollab />
         </div>
         <SidebarMobile id="fixedDiv" class="lg:hidden flex flex-row duration-200 ease-in-out"/>

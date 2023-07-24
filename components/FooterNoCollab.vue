@@ -2,7 +2,7 @@
   <div class="w-full h-full dark:bg-dark-bg dark:text-dark-text">
     
     <div class="pt-32 pb-16 lg:ml-16">
-      <div class="flex flex-col lg:flex-row gap-10 justify-center w-full items-center">
+      <div class="flex flex-col lg:flex-row px-5 lg:px-0 gap-10 justify-center w-full items-center">
         <!-- <h1 class="text-2xl font-bold text-white">ValiantVenture.</h1> -->
         <div class="flex flex-row gap-10">
           <img class="h-40" src="../assets/gg.svg" alt="">
