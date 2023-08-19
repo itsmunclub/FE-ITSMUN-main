@@ -33,7 +33,7 @@
         <div
           class="flex flex-col gap-6 md:gap-0 md:flex-row justify-center md:justify-between w-full items-center"
         >
-          <h1 class="text-2xl font-bold text-white">ValiantVenture.</h1>
+          <h1 class="text-2xl font-bold text-white">GreatnessGenesis.</h1>
           <div class="flex gap-4 items-center justify-center">
             <a
               class="cursor-alias"
