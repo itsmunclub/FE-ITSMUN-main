@@ -1,5 +1,5 @@
 <template>
-  <div class="w-auto h-full relative mx-10 lg:mx-20">
+  <div class="w-auto h-full relative mx-10 lg:mx-32">
     <!-- <nuxt-link to="/">
       <div
         :class="{
@@ -28,7 +28,9 @@
     </nuxt-link> -->
     <h1>MUN 101</h1>
     
-    <div class="py-8 text-justify">
+    <img src="../assets/flower.svg" class="absolute -right-12 -top-12 scale-75 z-0" alt="">
+
+    <div class="py-8 text-justify z-10 relative">
       <p>
         First of all, welcome! You’ve taken your first step into your MUN journey by clicking into this article. At first, there must be questions popped up in your head,
       </p>
@@ -69,12 +71,12 @@
       </p>
     </div>
 
-    <div class="py-8">
-      <h2>
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
         Chapter 1: What is MUN?
       </h2>
 
-      <p class="py-6 text-justify">
+      <p class="py-12 text-justify">
         <strong>MUN (Model United Nations)</strong> is a conference-like competition where one plays the role of a diplomat. You could be a nation’s delegate, an important historical/government figure, or even representatives of foreign bodies; NGOs, press, etc. to discuss regarding various topics and problems with other participants and create a draft resolution.
       </p>
 
@@ -101,28 +103,40 @@
       </div>
     </div>
 
-    <div class="py-8">
-      <h2>
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
         Chapter 2: What’s in MUN & MUN Procedures
       </h2>
 
-      <div class="py-6">
+      <img src="../assets/mun1012.png" class="w-full rounded-3xl my-12" alt="">
+      
+      <div class="mx-auto text-center">
+        <p>Study Guide (usually in e-book form)<br>Source: Jakarta MUN 2022</p>
+      </div>
+
+      <div class="py-16">
         <ul class="list-disc text-justify">
           <li>
-            <h3 class="text-2xl pb-4">Study Guide - What are the contents?</h3>
-            <p>Study Guide is a book written by the chairs which contains basic information about the topic and the council. Study Guide is usually handed days before the conference.
-              <br>
-              Generally, UN councils can be differed as low-pol and high-pol. Low-pol is usually considered as beginner friendly since there isn’t many politic and contention happen there. Example of low-pol such as UNHCR and UNESCO. As for high-pol council, there are many political things that delegates need to understand. The examples are UNSC and Crisis. 
-              <br>
-              However, in some conferences you might be able to find unique councils or international bodies such as African Union (AU), G20, European Union (EU), and Asean. The main thing that delegates need to understand is to make sure their solutions and flow of debate are in line with the mandate of the council that they’re in.</p>
+            <h3 class="text-2xl py-8">Study Guide - What are the contents?</h3>
+            <p>Study Guide is a document written by the chairs which contains <strong>basic information about the topic and the council.</strong> It is usually handed three weeks before your performance.
+              <br><br>
+              Generally, UN councils can be differentiated as <strong>low-pol and high-pol.</strong> Low-pol councils are usually considered as beginner friendly since there isn’t many politic and contention happen there. Example of low-pol such as UNHCR and UNESCO. As for high-pol council, there are many political things that delegates need to understand. The examples are UNSC and Crisis. 
+              <br><br>
+              However, in some conferences you might be able to find unique councils or international bodies such as African Union (AU), G20, European Union (EU), and Asean. The main thing that delegates need to understand is to <strong>make sure their solutions and flow of debate are in line with the mandate of the council that they’re in.</strong></p>
           </li>
           <li>
-            <h3 class="text-2xl pb-4">Mandates</h3>
+            <h3 class="text-2xl py-8">Mandates</h3>
             <p>A mandate is the authority to carry out policy or course of action. The mandate of a council directly influences the solution that a delegate can bring into the debate, i.e on one hand a delegate may bring forward an economic sanction as a part of their solution in one council (UNSC). On the other hand, a delegate might only be able to propose a recommendation as their main solution in other.</p>
+
+            <img src="../assets/mun1013.png" class="w-full rounded-3xl my-12" alt="">
+
+            <div class="mx-auto text-center pb-8">
+              <p>Roll Call during ITS MUN Club Joint Simulation with IR UPNVJT</p>
+            </div>
 
           </li>
           <li>
-            <h3 class="text-2xl pb-4">MUN Procedures - What Happens in MUN</h3>
+            <h3 class="text-2xl py-8">MUN Procedures - What Happens in MUN</h3>
             <ol class="list-decimal marker:font-bold">
               <li>
                 <h3 class="text-xl">Roll Call</h3>
@@ -135,13 +149,16 @@
               <li>
                 <h3 class="text-xl">Formal Debate</h3>
                 <p>A debate session where delegates need to deliver their arguments and propose their solutions regarding specific motion that has been proposed and voted upon before. In this session, there are several situations:</p>
-                <ul class="list-disc">
+                <ul class="list-disc pl-6 py-8">
                   <li><strong>Moderated Caucus (MC):</strong> Where delegates need to deliver their argument sequentially and same time constrain for each speaker.</li>
                   <li><strong>Unmoderated Caucus (UMC):</strong> Debate forum where delegates are free to express their argument without any rules, except to keep their diplomatic manner and respect each other.</li>
                   <li><strong>Consultation of The Whole (COTW):</strong> When delegates need to speak after one another where the delegate who speak is given the privilege to choose next delegate to speak. There will no time constrain for each speaker.</li>
                 </ul>
-                <p class="py-8">A debate session where delegates need to deliver their arguments and propose their solutions regarding specific motion that has been proposed and voted upon before. In this session, there are several situations:</p>
-                <ul class="list-disc">
+                
+                <img src="../assets/mun1014.png" class="w-full rounded-3xl my-12 -left-4" alt="">
+
+                <p>During and after the debate, there will be several documents that the delegates need to write and submit, which are:</p>
+                <ul class="list-disc pl-6 pt-8">
                   <li><strong>Working Paper (WP):</strong> a document which consist of compilation of all issues and solutions from delegates and there’s no strict formatting.</li>
                   <li><strong>Draft Resolution (DR):</strong> a formal document which consist solutions and will be the final result of conference</li>
                   <li><strong>DR Voting:</strong> DR will be presented by sponsor(s) and there will be a QnA session. There’s a possibility of amendments if delegates wanting to change anything in DR. Then, council can proceed to DR Voting as the last stage.</li>
@@ -157,15 +174,15 @@
       <ul id="timeline" class="steps steps-horizontal w-full">
         <li class="step step-success"><p class="px-2">Roll Call</p></li>
         <li class="step step-success"><p class="px-2">General Speaker's List</p></li>
-        <li class="step step-success"><p class="px-2">Formal Debate (UC, UMC, CoTW)</p></li>
+        <li class="step step-success"><p class="px-2">Formal Debate</p></li>
         <li class="step step-success"><p class="px-2">Working Paper</p></li>
         <li class="step step-success"><p class="px-2">Draft Resolution</p></li>
         <li class="step step-success"><p class="px-2">DR Voting</p></li>
       </ul>
     </div>
 
-    <div class="py-8">
-      <h2>
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
         Chapter 3: Why MUN?
       </h2>
 

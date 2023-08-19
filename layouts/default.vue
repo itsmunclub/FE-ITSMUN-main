@@ -5,7 +5,7 @@
       <div class="w-full min-h-screen h-full flex flex-col mx-auto dark:bg-dark-bg duration-500 ease-in-out">
         <div class="pb-20 pt-10 px-4 mx-10 flex flex-col gap-10">
           <SwitchLight @isDarkMode="switchLight" />
-          <Carousel class="z-10" />
+          <Carousel class="z-10 lg:mx-32" />
           <img class="w-32 h-32 lg:w-44 lg:h-w-44 scale-75 lg:scale-100 right-2 lg:right-16 top-56 md:top-64 lg:top-80 xl:top-[392px] 2xl:top-[500px] 3xl:top-[550px] absolute z-0" src="../assets/flower.svg" alt="">
           <Nuxt v-lazy-load />
           <!-- <Supporters v-lazy-load /> -->
@@ -39,7 +39,7 @@ export default {
     const fixedDiv = document.getElementById('fixedDiv');
 
     // Set the distance from the top where the div should stop following
-    const stopFollowingDistance = 1800; // Adjust this value as needed
+    const stopFollowingDistance = 2000; // Adjust this value as needed
 
     // Function to handle scroll event
     function handleScroll() {

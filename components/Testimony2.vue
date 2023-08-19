@@ -26,7 +26,7 @@
                 <img class="absolute scale-75 -bottom-20 -left-20 z-0" src="../assets/flower.svg" alt="">
             </div>
             <div class="bg-[#9A5257] min-w-[180px] w-auto h-auto rounded-xl overflow-clip">
-                <img class="min-w-[100%] min-h-[100%] object-cover" src="../assets/haikhal.png" alt="">
+                <img class="min-w-[100%] min-h-[100%] object-cover" src="../assets/fio.png" alt="">
             </div>
         </div>
         <div class="lg:hidden flex flex-col pt-14">

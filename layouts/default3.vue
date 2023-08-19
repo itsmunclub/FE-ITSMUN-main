@@ -38,7 +38,7 @@
   
       // Set the distance from the top where the div should stop following
       
-      const stopFollowingDistance = 1400; // Adjust this value as needed
+      const stopFollowingDistance = 2800; // Adjust this value as needed
   
       // Function to handle scroll event
       function handleScroll() {

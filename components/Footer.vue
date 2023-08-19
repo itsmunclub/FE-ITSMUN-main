@@ -1,8 +1,8 @@
 <template>
   <div class="w-full h-full">
     <div class="w-full bg-[#272F35] dark:bg-[#E4E6E8] dark:shadow-xl dark:hover:shadow-gray-700 rounded-none duration-500 ease-in-out">
-      <div class="flex flex-col pt-20 lg:pt-32 lg:pl-44 items-center lg:items-start justify-between pb-10 gap-20 lg:gap-40 lg:pr-20">
-        <div class="flex flex-col gap-10 justify-center lg:justify-start items-center lg:items-start"> <h1 class="text-2xl lg:text-4xl lg:text-7xl font-bold text-white dark:text-[#272F35]">
+      <div class="flex flex-col pt-20 lg:pt-32 lg:pl-48 items-center lg:items-start justify-between pb-10 gap-20 lg:gap-40 lg:pr-20">
+        <div class="flex flex-col gap-10 justify-center lg:justify-start items-center lg:items-start"> <h1 class="text-2xl lg:text-7xl font-bold text-white dark:text-[#272F35]">
             Collaborate.
           </h1>
           <h2 class="text-white/75 dark:text-[#272F35] font-medium text-base lg:text-2xl text-center lg:text-start">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-row justify-between lg:w-[50%] w-full px-7 lg:px-0 lg:pl-7 pt-12 lg:pt-0">
+        <div class="flex flex-row justify-between lg:w-[50%] w-full px-10 lg:px-0 lg:pl-7 lg:pr-20 pt-12 lg:pt-0">
           <button class="ml-3">
             <NuxtLink to="/about/#" class="whitespace-nowrap">About Us</NuxtLink>
           </button>
