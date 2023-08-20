@@ -88,6 +88,7 @@ export default {
         modMun:'',
         unmodMun: '',
         drafMun: '',
+        payment: '',
         paymentProofFile: '',
         final: ''
         // Add other form fields as needed
@@ -108,6 +109,18 @@ export default {
         this.currentStep++;
       }
     },
+        isComplete() {
+      const requiredFields = [
+        'name', 'email', 'studentId', 'lineId', 'phoneNumber', 'faculty', 'major',
+        'exp', 'tellExp', 'topic', 'postLink', 'submitEssay',
+        'isMun', 'intMun', 'paperMun', 'typeMun', 'roleMun', 'diffMun',
+        'yieldMun', 'modMun', 'unmodMun', 'drafMun'
+        // Add other required fields here
+      ];
+
+      return requiredFields.every(field => !!this.formData[field]);
+    },
+
     handleNext() {
       if (this.currentStep === 3) { // Adjust the step index accordingly
         this.showConfirmationModal = true; // Show the confirmation modal
@@ -130,7 +143,7 @@ export default {
     },
     cancelProceed() {
       // this.currentStep = this.totalSteps; // Redirect to the final step
-      if(this.formData.name && this.formData.email && this.formData.studentId && this.formData.lineId && this.formData.phoneNumber && this.formData.faculty && this.formData.major && this.formData.exp && this.formData.tellExp && this.formData.topic && this.formData.postLink && this.formData.submitEssay && this.formData.isMun && this.formData.intMun && this.formData.paperMun && this.formData.typeMun && this.formData.roleMun && this.formData.diffMun && this.formData.yieldMun && this.formData.modMun && this.formData.unmodMun && this.formData.drafMun){
+      if(this.isComplete()){
         this.showConfirmationModal = false;
         this.currentStep = this.totalSteps;
         console.log(this.formData)
