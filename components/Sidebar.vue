@@ -14,9 +14,9 @@
                 <div class="hidden dark:inline"><img class="h-10" src="../static/blog-dark.svg" alt="" srcset=""></div>
                 <div class="hidden dark:inline"><img class="h-10" src="../static/faq-dark.svg" alt="" srcset=""></div>
             </div>
-            <div class="bottom-0 mx-auto">
+            <!-- <div class="bottom-0 mx-auto">
                 <img class="h-10" src="../static/close.svg" alt="" srcset="">
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

@@ -4,7 +4,7 @@
       <div :class="{dark: dark, 'bg-[#E4E6E8]': !dark}" class="w-full min-h-screen h-full flex flex-col mx-auto font-montserrat lg:pl-4 duration-500 ease-in-out">
         <Sidebar class="z-10 hidden lg:inline-block" :class="{dark: dark, 'bg-dark-bg': !dark}"/>
         <div class="w-full min-h-screen h-full flex flex-col mx-auto dark:bg-dark-bg duration-500 ease-in-out">
-          <div class="pb-20 pt-10 px-4 flex flex-col gap-10 mx-10"> <!-- buat setiap page kasih mx-10 -->
+          <div class="pb-20 pt-10 px-4 mx-4 sm:mx-8 lg:mx-10 flex flex-col gap-10"> <!-- buat setiap page kasih mx-10 -->
             <SwitchLight @isDarkMode="switchLight" />
             <!-- <Supporters v-lazy-load /> -->
             <Nuxt v-lazy-load />

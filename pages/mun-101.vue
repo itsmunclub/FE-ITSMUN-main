@@ -1,5 +1,5 @@
 <template>
-  <div class="w-auto h-full relative mx-10 lg:mx-32">
+  <div class="w-auto h-full relative mx-0 sm:mx-10 lg:mx-20 xl:mx-32">
     <!-- <nuxt-link to="/">
       <div
         :class="{
@@ -28,7 +28,7 @@
     </nuxt-link> -->
     <h1>MUN 101</h1>
     
-    <img src="../assets/flower.svg" class="absolute -right-12 -top-12 scale-75 z-0" alt="">
+    <img src="../assets/flower.svg" class="absolute -right-12 -top-12 scale-30 sm:scale-50 lg:scale-75 z-0" alt="">
 
     <div class="py-8 text-justify z-10 relative">
       <p>
@@ -85,10 +85,10 @@
 
       <div class="py-4">
         <ul class="list-disc mx-5">
-          <li>Communication; diplomacy, public speaking, negotiations</li>
-          <li>Leadership</li>
-          <li>Academics and Research</li>
-          <li>Networking</li>
+          <li><p>Communication; diplomacy, public speaking, negotiations</p></li>
+          <li><p>Leadership</p></li>
+          <li><p>Academics and Research</p></li>
+          <li><p>Networking</p></li>
         </ul>
       </div>
 
@@ -115,7 +115,7 @@
       </div>
 
       <div class="py-16">
-        <ul class="list-disc text-justify">
+        <ul class="text-justify">
           <li>
             <h3 class="text-2xl py-8">Study Guide - What are the contents?</h3>
             <p>Study Guide is a document written by the chairs which contains <strong>basic information about the topic and the council.</strong> It is usually handed three weeks before your performance.
@@ -137,7 +137,7 @@
           </li>
           <li>
             <h3 class="text-2xl py-8">MUN Procedures - What Happens in MUN</h3>
-            <ol class="list-decimal marker:font-bold">
+            <ol class="list-decimal marker:font-bold pl-5">
               <li>
                 <h3 class="text-xl">Roll Call</h3>
                 <p>Where all delegates will be called by chair to confirm their presence and voting.</p>
@@ -150,18 +150,18 @@
                 <h3 class="text-xl">Formal Debate</h3>
                 <p>A debate session where delegates need to deliver their arguments and propose their solutions regarding specific motion that has been proposed and voted upon before. In this session, there are several situations:</p>
                 <ul class="list-disc pl-6 py-8">
-                  <li><strong>Moderated Caucus (MC):</strong> Where delegates need to deliver their argument sequentially and same time constrain for each speaker.</li>
-                  <li><strong>Unmoderated Caucus (UMC):</strong> Debate forum where delegates are free to express their argument without any rules, except to keep their diplomatic manner and respect each other.</li>
-                  <li><strong>Consultation of The Whole (COTW):</strong> When delegates need to speak after one another where the delegate who speak is given the privilege to choose next delegate to speak. There will no time constrain for each speaker.</li>
+                  <li><p><strong>Moderated Caucus (MC):</strong> Where delegates need to deliver their argument sequentially and same time constrain for each speaker.</p></li>
+                  <li><p><strong>Unmoderated Caucus (UMC):</strong> Debate forum where delegates are free to express their argument without any rules, except to keep their diplomatic manner and respect each other.</p></li>
+                  <li><p><strong>Consultation of The Whole (COTW):</strong> When delegates need to speak after one another where the delegate who speak is given the privilege to choose next delegate to speak. There will no time constrain for each speaker.</p></li>
                 </ul>
                 
                 <img src="../assets/mun1014.png" class="w-full rounded-3xl my-12 -left-4" alt="">
 
                 <p>During and after the debate, there will be several documents that the delegates need to write and submit, which are:</p>
                 <ul class="list-disc pl-6 pt-8">
-                  <li><strong>Working Paper (WP):</strong> a document which consist of compilation of all issues and solutions from delegates and there’s no strict formatting.</li>
-                  <li><strong>Draft Resolution (DR):</strong> a formal document which consist solutions and will be the final result of conference</li>
-                  <li><strong>DR Voting:</strong> DR will be presented by sponsor(s) and there will be a QnA session. There’s a possibility of amendments if delegates wanting to change anything in DR. Then, council can proceed to DR Voting as the last stage.</li>
+                  <li><p><strong>Working Paper (WP):</strong> a document which consist of compilation of all issues and solutions from delegates and there’s no strict formatting.</p></li>
+                  <li><p><strong>Draft Resolution (DR):</strong> a formal document which consist solutions and will be the final result of conference.</p></li>
+                  <li><p><strong>DR Voting:</strong> DR will be presented by sponsor(s) and there will be a QnA session. There’s a possibility of amendments if delegates wanting to change anything in DR. Then, council can proceed to DR Voting as the last stage.</p></li>
                 </ul>
               </li>
             </ol>
@@ -170,10 +170,10 @@
       </div>
     </div>
 
-    <div class="w-full mx-auto my-6 font-bold">
+    <div class="w-full mx-auto my-6 font-bold overflow-scroll">
       <ul id="timeline" class="steps steps-horizontal w-full">
         <li class="step step-success"><p class="px-2">Roll Call</p></li>
-        <li class="step step-success"><p class="px-2">General Speaker's List</p></li>
+        <li class="step step-success"><p class="px-2">GSL</p></li>
         <li class="step step-success"><p class="px-2">Formal Debate</p></li>
         <li class="step step-success"><p class="px-2">Working Paper</p></li>
         <li class="step step-success"><p class="px-2">Draft Resolution</p></li>
@@ -190,15 +190,15 @@
         <p>MUN is aimed to discuss a problem thoroughly from root causes, challenges, status quo, and past actions. From there, delegates are expected to formulate possible solutions that are in line with UN council’s mandate. The solutions will be collected through working paper. Then, it will be finalized and presented as Draft of Resolution as the end result of a conference.</p><br>
         <p>Through these activities in MUN, you will have <strong>reasons why you should do MUN:</strong></p>
         <div class="py-6">
-          <ul class="list-disc" id="no-space">
-            <li><strong>Develop soft skills</strong> (debating, negotiating, writing, speaking, leadership, etc.)</li>
-            <li><strong>Get out of your comfort zone</strong> (especially, if you learn engineering!)</li>
-            <li class="font-medium">Expand your network and get to know cool people from other universities</li>
+          <ul class="list-disc pl-5" id="no-space">
+            <li><p><strong>Develop soft skills</strong> (debating, negotiating, writing, speaking, leadership, etc.)</p></li>
+            <li><p><strong>Get out of your comfort zone</strong> (especially, if you learn engineering!).</p></li>
+            <li><p><strong>Expand your network</strong> and get to know cool people from other universities.</p></li>
           </ul>
         </div>
-        <p>If you want to get a more comprehensive explanation, you can join the MUN 101 event on September 4th 2022. This is perfect to answer your concerns! We will provide an extensive explanation for the entirety of the MUN procedures. 
-
-          So, what are you waiting for? Register yourself for MUN 101 session.</p>
+        <p>If you want to get a more comprehensive explanation, you can join the MUN 101 event on September 4th 2022. This is perfect to answer your concerns! We will provide an extensive explanation for the entirety of the MUN procedures.</p>
+        <br>
+        <p>So, what are you waiting for? <a href="/register" class="font-bold hover:underline">Register</a> yourself for MUN 101 session.</p>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-auto h-full relative lg:mx-32">
+  <div class="w-auto h-full relative mx-0 sm:mx-10 lg:mx-20 xl:mx-32">
     <!-- <div
       :class="{
         '-translate-y-full': !toast,
@@ -39,20 +39,20 @@
 
     <Hero class="" v-lazy-load />
 
-    <img class="mx-auto my-10 pt-24 lg:pb-10 scale-150" src="../assets/blog.svg" alt="">
+    <img class="mx-auto mt-10 md:mt-16 lg:mt-24 lg:mb-12 pt-24 h-[176px] md:scale-125 lg:scale-150" src="../assets/blog.png" alt="">
 
     <div class="flex flex-col lg:flex-row justify-between py-8">
       <div class="lg:hidden mx-auto py-12">
-        <img class="rounded-xl scale-125" src="../assets/blog-img.svg" alt="">
+        <img class="rounded-xl w-full" src="../assets/blog-img.jpg" alt="">
       </div>
-      <div class="flex flex-col pr-8 relative">
+      <div class="flex flex-col lg:pr-8 relative">
         <div class="relative">
           <p>Written by Bayu Prayogo</p>
           <h1 id="mun101" style="text-decoration-skip-ink: none" class="relative bg-transparent dark:text-dark-text text-start dark:decoration-dark-accent decoration-[#FFAFAF] text-6xl tracking-wide font-bold leading-tight text-primary">
             MUN 101
           </h1>
-          <img class="absolute scale-150 right-12 top-1" src="../assets/index101-1.png" alt="">
-          <img class="absolute scale-150 right-3 top-10" src="../assets/index101-2.png" alt="">
+          <img class="absolute scale-50 lg:scale-150 right-3 top-0 lg:right-12 lg:top-1" src="../assets/index101-1.png" alt="">
+          <img class="absolute scale-50 lg:scale-150 right-0 top-3 lg:right-3 lg:top-10" src="../assets/index101-2.png" alt="">
         </div>
   
         <p class="text-primary dark:text-dark-text lg:text-2xl font-medium text-justify lg:w-[52rem] pt-3 leading-relaxed">
@@ -78,23 +78,17 @@
         <img class="rounded-xl scale-110" src="../assets/blog-img.svg" alt="">
       </div>
     </div>
-    <img class="mx-auto my-10 pt-16 scale-150 pb-8" src="../assets/testimony.svg" alt="">
+    <img class="mx-auto mt-10 md:mt-16 lg:mt-24 lg:mb-12 pt-16 h-[144px] md:scale-125" src="../assets/testimony.png" alt="">
     <div class="py-12 flex flex-col gap-28 lg:gap-[128px]">
       <Testimony :name="testimony1[0]" :department="testimony1[1]" :achievement1="testimony1[2]" :achievement2="testimony1[3]" :achievement3="testimony1[4]" :words="testimony1[5]"/>
       <TestimonyReverse :name="testimony2[0]" :department="testimony2[1]" :achievement1="testimony1[2]" :achievement2="testimony1[3]" :achievement3="testimony1[4]" :words="testimony2[5]"/>
       <Testimony2 :name="testimony3[0]" :department="testimony3[1]" :achievement1="testimony1[2]" :achievement2="testimony1[3]" :achievement3="testimony1[4]" :words="testimony3[5]"/>
     </div>
     
-    <img class="mx-auto pt-16 pb-8" src="../assets/mediapartner.svg" alt="">
+    <img class="mx-auto mt-10 md:mt-16 lg:mt-24 lg:mb-12 pt-16 h-[128px] md:scale-125" src="../assets/mediapartner.png" alt="">
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-[#D9D9D9]">
-        Logo Medpar
-      </div>
-      <div class="bg-[#D9D9D9]">
-        Logo Medpar
-      </div>
-      <div class="bg-[#D9D9D9]">
-        Logo Medpar
+      <div class="col-span-3">
+        <img class="px-8 py-10" src="../assets/logosxcwhite.png" alt="">
       </div>
     </div>
   </div>
@@ -112,8 +106,8 @@ export default {
             loading: false,
             toast: false,
             testimony1: ["M. Haikhal Fazad", "Chemistry 2021", 'ITS MUN Club International Delegation for Singapore MUN 2023', 'Honorable Mention Indonesia MUN 2023', 'Honorable Mention Best Position Paper JAVAMUN 2022', "There are so many things that can be developed and obtained in ITS MUN! First of all, public speaking skills will certainly improve and not as scary as it used to be. In MUN, it's not only about English and speaking, we can also develop critical thinking and problem solving skills here by dealing with global issues. Things like this are found when you want to join MUN and have to do research and position papers."],
-            testimony2: ["Satryo Akbar Nurizki", "Civil Engineering 2022", 'ITS MUN Club International Delegation for Singapore MUN 2023', 'Verbal Commendation Jakarta International MUN 2022', 'Verbal Commendation Makassar MUN', "ITS MUN Club is a perfect place either for those who claim themselves as jack of all trades or master of one because you can be the master of all trades here! Not only will you achieve a higher ceiling to your English proficiency, but also to your public speaking and critical thinking. Besides, the world of Model United Nations is an accommodating place to plentiful interests. Keen to history and politics? Go for UNSC, love the planet and the environment? Go for UNEP or COP, excited to economy? Go for ECOSOC or G20, and so much more! Not to mention that your idea is not only visible through the position paper you wrote, but also audible during the council where you will meet and exchange ideas with great people!"],
-            testimony3: ["Nailah Fiorenza F.", "Urban and Regional Planning 2022", 'Best Delegate Impactional MUN 2023', '3rd Place Smart City Division GemasTIK XV 2022', 'Verbal Commendation SEINMUN 2023', "Joining ITS MUN Club will benefit you a lot. By participating in many MUN simulations, you may first improve your English abilities, and as you work to address international issues, your mindset will expand as you get new perspectives on the world. Another advantage is that the ITS MUN Club is a great place to make a lot of amazing friends and excellent mentors who will motivate you to perform at your best not only in the MUN circumstances but also throughout your university experience."],
+            testimony2: ["Satryo Akbar Nurizki", "Civil Engineering 2022", 'ITS MUN Club International Delegation for Singapore MUN 2023', 'Verbal Commendation Jakarta International MUN 2022', 'Verbal Commendation Makassar MUN', "ITS MUN Club is a perfect place either for those who claim themselves as jack of all trades or master of one because you can be the master of all trades here! Besides, the world of Model United Nations is an accommodating place to plentiful interests. Keen to history and politics? Go for UNSC, love the planet and the environment? Go for UNEP or COP, and so much more!"],
+            testimony3: ["Nailah Fiorenza F.", "Urban and Regional Planning 2022", 'Best Delegate Impactional MUN 2023', '3rd Place Smart City Division GemasTIK XV 2022', 'Verbal Commendation SEINMUN 2023', "Joining ITS MUN Club will benefit you a lot. By participating in many MUN simulations, you may first improve your English abilities, and as you work to address international issues, your mindset will expand as you get new perspectives on the world. Another advantage is that the ITS MUN Club is a great place to make amazing friends and mentors who will motivate you to perform at your best not only in the MUN circumstances but also throughout your university experience."],
         };
     },
     head() {

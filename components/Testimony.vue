@@ -25,12 +25,12 @@
                 </div>
                 <img class="absolute scale-75 -bottom-20 -left-20 z-0" src="../assets/flower.svg" alt="">
             </div>
-            <div class="bg-[#9A5257] min-w-[180px] w-auto h-auto rounded-xl overflow-clip">
+            <div class="bg-[#9A5257] min-w-[150px] sm:min-w-[160px] lg:min-w-[180px] w-auto h-auto rounded-xl overflow-clip">
                 <img class="min-w-[100%] min-h-[100%] object-cover" src="../assets/haikhal.png" alt="">
             </div>
         </div>
-        <div class="lg:hidden flex flex-col pt-14">
-            <h2 class="underline underline-offset-8 font-bold">{{ name }}</h2>
+        <div class="lg:hidden flex flex-col pt-10 lg:pt-14">
+            <h2 class="underline underline-offset-8 font-bold pb-2">{{ name }}</h2>
             <p>{{ department }}</p>
             <h4 class="py-2">Achievements</h4>
             <p>{{ achievement1 }} <br>{{ achievement2 }} <br>{{ achievement3 }}</p>
