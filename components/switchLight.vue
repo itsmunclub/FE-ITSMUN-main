@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dark:bg-dark-bg duration-300 delay-150 ease-in-out w-full h-full mx-auto"
+    class="dark:bg-dark-bg transition-colors ease-in-out w-full h-full mx-auto"
   >
     <div class="flex items-center justify-end w-full gap-2">
       <div
