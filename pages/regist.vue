@@ -69,9 +69,6 @@ import Final from '../components/Regist/Final.vue';
 
 export default {
   layout: 'forms',
-
-  layout: 'forms',
-
   components: {
     General,
     Prev,
@@ -81,7 +78,6 @@ export default {
   data() {
     return {
       currentStep: 1,
-      totalSteps: 4,
       totalSteps: 4,
       formData: {
         name: '',
@@ -107,13 +103,10 @@ export default {
         unmodMun: '',
         drafMun: '',
         termsAgreed: false,
-        termsAgreed: false,
         final: ''
       },
       stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
-      stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
       showConfirmationModal: false,
-      showComplete: false,
       showComplete: false,
     };
   },
@@ -135,7 +128,6 @@ export default {
         'exp', 'tellExp', 'topic', 'postLink', 'submitEssay',
         'isMun', 'intMun', 'paperMun', 'typeMun', 'roleMun', 'diffMun',
         'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
-        'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
       ];
 
       return requiredFields.every(field => !!this.formData[field]);
@@ -143,15 +135,9 @@ export default {
     confirmProceed() {
       this.showConfirmationModal = false;
       this.$router.push('/101');
-      this.$router.push('/101');
     },
     cancelProceed() {
       // this.currentStep = this.totalSteps; // Redirect to the final step
-      this.showConfirmationModal = false;
-      this.$router.push('/');
-    },
-    closeMod() {
-      this.showComplete = false;
       this.showConfirmationModal = false;
       this.$router.push('/');
     },
@@ -209,11 +195,9 @@ export default {
   computed: {
     steps() {
       // steps
-      // steps
       return Object.keys(this.stepNames);
     },
     getCurrentStepComponent() {
-      // switch case step
       // switch case step
       switch (this.currentStep) {
         case 1:
