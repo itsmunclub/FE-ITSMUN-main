@@ -88,7 +88,7 @@
     <img class="mx-auto mt-10 md:mt-16 lg:mt-24 lg:mb-12 pt-16 h-[128px] md:scale-125" src="../assets/mediapartner.png" alt="">
     <div class="grid grid-cols-3 gap-3">
       <div class="col-span-3">
-        <img class="px-8 py-10" src="../assets/logosxcwhite.png" alt="">
+        <img class="px-8 py-10 mx-auto" src="../assets/logosxcwhite.png" alt="">
       </div>
     </div>
   </div>

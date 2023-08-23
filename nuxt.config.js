@@ -61,8 +61,22 @@ export default {
     ['nuxt-lazy-load', { directiveOnly: true }],
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/toast',
     'vue-plausible',
   ],
+
+  toast: {
+    position: 'top-center',
+    register: [ // Register custom toasts
+      {
+        name: 'my-error',
+        message: 'Oops...Something went wrong',
+        options: {
+          type: 'error'
+        }
+      }
+    ]
+  },
 
   plausible: {
     domain: 'https://itsmunclub.space/',

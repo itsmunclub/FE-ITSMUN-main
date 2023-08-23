@@ -33,7 +33,7 @@
       Organization
     </h1>
     <div class="pt-10">
-      <nuxt-link to="/register">
+      <nuxt-link to="/register-member">
         <button
           class="dark:text-dark-text dark:border-dark-accent group text-md lg:text-5xl flex px-6 py-4 items-center justify-center border-2 rounded-full border-black duration-300 ease-in-out"
         >

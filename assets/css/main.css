@@ -92,3 +92,7 @@ ul,
 .page-leave-to {
   opacity: 0;
 }
+
+#file-upload-button {
+  @apply border-none;
+}
