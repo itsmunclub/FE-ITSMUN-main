@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full relative">
-    <nuxt-link to="/">
+  <div class="w-auto h-full relative mx-0 sm:mx-10 lg:mx-20 xl:mx-32">
+    <!-- <nuxt-link to="/">
       <div
         :class="{
           hidden: !showNavbar,
@@ -25,250 +25,204 @@
         </span>
         Back
       </div>
-    </nuxt-link>
+    </nuxt-link> -->
+    <h1>MUN 101</h1>
+    
+    <img src="../assets/flower.svg" class="absolute -right-12 -top-12 scale-30 sm:scale-50 lg:scale-75 z-0" alt="">
 
-    <div
-      :class="{
-        'translate-x-full': !toast,
-        'translate-x-0': toast,
-        'opacity-0': !toast,
-        'opacity-100': toast,
-      }"
-      class="fixed right-4 bottom-4 dark:bg-dark-accent bg-primary rounded-lg hidden md:flex gap-6 px-4 py-6 items-start justify-between duration-500 ease-in-out"
-    >
-      <p class="w-auto p text-[#ececec] dark:text-dark-bg text-xs">
-        Don't forget to register <br />
-        yourself in MUN 101
+    <div class="py-8 text-justify z-10 relative">
+      <p>
+        First of all, welcome! You’ve taken your first step into your MUN journey by clicking into this article. At first, there must be questions popped up in your head,
       </p>
-
-      <svg
-        @click="close"
-        width="20"
-        height="20"
-        class="stroke-2 group"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          class="rotate-[45deg] origin-center group-hover:rotate-0 duration-500 ease-in-out stroke-white dark:stroke-dark-bg"
-          d="M18 6L6 18"
-          stroke=""
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          class="rotate-[-45deg] origin-center group-hover:rotate-0 duration-500 ease-in-out stroke-white dark:stroke-dark-bg"
-          d="M6 6L18 18"
-          stroke=""
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+      
+      <div class="py-12">
+        <div class="grid grid-cols-4 lg:pb-6">
+          <p class="italic font-semibold text-center">
+            What is MUN
+          </p>
+          <p class="opacity-0">
+            What are the MUN procedures?
+          </p>
+          <p class="italic font-semibold text-center">
+            What's included in MUN?
+          </p>
+          <p class="opacity-0">
+            Why MUN?
+          </p>
+        </div>
+        <div class="grid grid-cols-4 lg:pt-6">
+          <p class="opacity-0">
+            What is MUN
+          </p>
+          <p class="italic font-semibold text-center">
+            What are the MUN procedures?
+          </p>
+          <p class="opacity-0">
+            What's included in MUN?
+          </p>
+          <p class="italic font-semibold text-center">
+            Why MUN?
+          </p>
+        </div>
+      </div>
+  
+      <p>
+        If you feel like, whoa, there’s so much to learn -- well, get away from those thoughts. Take a deep breath, don’t worry, and don’t be overwhelmed because we’re here, providing everything you need to know about Model United Nations.
+      </p>
     </div>
 
-    <div
-      class="flex flex-col gap-10 items-center justify-center w-[calc(100vw-30%)] mx-auto max-w-7xl"
-    >
-      <article>
-        <div class="flex flex-col gap-10 md:gap-24">
-          <h4 class="text-center">3 MIN READ</h4>
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
+        Chapter 1: What is MUN?
+      </h2>
 
-          <div class="flex flex-col gap-4 items-center justify-center">
-            <h1
-              style="text-decoration-skip-ink: none"
-              class="underline relative bg-transparent underline-offset-[-35%] decoration-[1rem] dark:text-dark-text dark:decoration-dark-accent decoration-[#FFAFAF] under text-center text-5xl md:text-6xl tracking-wide font-bold leading-relaxed text-primary"
-            >
-              <strong> MUN 101 : EVERYTHING <br />YOU NEED TO KNOW</strong>
-            </h1>
-            <div
-              class="flex flex-col md:flex-row gap-4 items-center text-primary font-bold dark:text-dark-text"
-            >
-              <h1 class="uppercase">Bayu Prayogo</h1>
-              <div class="w-3 h-3 rounded-full bg-primary"></div>
-              <h1 class="uppercase">THURSDAY, 18 August 2022</h1>
-              <div class="w-3 h-3 rounded-full bg-primary"></div>
-              <h1 class="uppercase">{{ viewers }} Readers</h1>
+      <p class="py-12 text-justify">
+        <strong>MUN (Model United Nations)</strong> is a conference-like competition where one plays the role of a diplomat. You could be a nation’s delegate, an important historical/government figure, or even representatives of foreign bodies; NGOs, press, etc. to discuss regarding various topics and problems with other participants and create a draft resolution.
+      </p>
+
+      <img class="rounded-2xl my-6 lg:w-full" src="../assets/carousel/2.png" alt="">
+      <p>In MUNs, you can expect to <strong>master these skills</strong>:</p>
+
+      <div class="py-4">
+        <ul class="list-disc mx-5">
+          <li><p>Communication; diplomacy, public speaking, negotiations</p></li>
+          <li><p>Leadership</p></li>
+          <li><p>Academics and Research</p></li>
+          <li><p>Networking</p></li>
+        </ul>
+      </div>
+
+      <div class="mt-6 border-l-8 border-[#272F35]">
+        <h3 class="text-lg pl-2">Key Terms</h3>
+        <ul class="list-disc mx-12 pt-6">
+          <li><strong>Chairs:</strong> They are the moderators of the council and evaluate your performance.</li>
+          <li><strong>Delegate:</strong> The participants of the council.</li>
+          <li><strong>Study Guide:</strong> Written by the chairs, contains basic information about the topic and the council.</li>
+          <li><strong>Placcards:</strong> You raise your placard to make a point or a motion.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
+        Chapter 2: What’s in MUN & MUN Procedures
+      </h2>
+
+      <img src="../assets/mun1012.png" class="w-full rounded-3xl my-12" alt="">
+      
+      <div class="mx-auto text-center">
+        <p>Study Guide (usually in e-book form)<br>Source: Jakarta MUN 2022</p>
+      </div>
+
+      <div class="py-16">
+        <ul class="text-justify">
+          <li>
+            <h3 class="text-2xl py-8">Study Guide - What are the contents?</h3>
+            <p>Study Guide is a document written by the chairs which contains <strong>basic information about the topic and the council.</strong> It is usually handed three weeks before your performance.
+              <br><br>
+              Generally, UN councils can be differentiated as <strong>low-pol and high-pol.</strong> Low-pol councils are usually considered as beginner friendly since there isn’t many politic and contention happen there. Example of low-pol such as UNHCR and UNESCO. As for high-pol council, there are many political things that delegates need to understand. The examples are UNSC and Crisis. 
+              <br><br>
+              However, in some conferences you might be able to find unique councils or international bodies such as African Union (AU), G20, European Union (EU), and Asean. The main thing that delegates need to understand is to <strong>make sure their solutions and flow of debate are in line with the mandate of the council that they’re in.</strong></p>
+          </li>
+          <li>
+            <h3 class="text-2xl py-8">Mandates</h3>
+            <p>A mandate is the authority to carry out policy or course of action. The mandate of a council directly influences the solution that a delegate can bring into the debate, i.e on one hand a delegate may bring forward an economic sanction as a part of their solution in one council (UNSC). On the other hand, a delegate might only be able to propose a recommendation as their main solution in other.</p>
+
+            <img src="../assets/mun1013.png" class="w-full rounded-3xl my-12" alt="">
+
+            <div class="mx-auto text-center pb-8">
+              <p>Roll Call during ITS MUN Club Joint Simulation with IR UPNVJT</p>
             </div>
-          </div>
 
-          <div
-            class="prose dark:prose-h2:text-dark-text prose-img:pb-20 prose-h2:text-primary prose-pre:py-10 md:prose-pre:flex prose-pre:pr-24 prose-p:text-justify dark:prose-h4:text-dark-text prose-h4:py-10 prose-h4:text-primary prose-h4:underline prose-h4:font-semibold prose-h4:text-lg dark:prose-h1:text-dark-text dark:prose-li:text-dark-text dark:prose-p:text-dark-text prose-li:text-primary prose-h1:py-14 prose-p:text-primary prose-h1:uppercase prose-h1:text-primary prose-blockquote:my-10 px-10"
-          >
-            <h1>Chapter 1 : What is MUN?</h1>
-            <p>
-              MUN (Model United Nations) is a conference-like competition where
-              one plays the role of a diplomat. You could be a nation’s
-              delegate, an important historical/government figure, or even
-              representatives of foreign bodies; NGOs, press, etc. to discuss
-              regarding various topics and problems with other participants and
-              create a draft resolution.
-            </p>
-
-            <p>In MUNs you can expect to master these skills:</p>
-            <ul>
-              <li>Communication; diplomacy, public speaking, negotiations</li>
-              <li>Leadership</li>
-              <li>Academics and Research</li>
-              <li>Networing</li>
-            </ul>
-
-            <h3>Why MUN? We’re an engineering institution!</h3>
-            <ul>
-              <li>Developing soft skills</li>
-              <li>Getting out of your comfort zone</li>
+          </li>
+          <li>
+            <h3 class="text-2xl py-8">MUN Procedures - What Happens in MUN</h3>
+            <ol class="list-decimal marker:font-bold pl-5">
               <li>
-                Networking and getting to know cool people from other
-                universities
-              </li>
-            </ul>
-
-            <blockquote>
-              <h3>Key Terms</h3>
-              <ul>
-                <li>
-                  <strong> Chairs</strong>: They are the moderators of the
-                  council and evaluate your performance.
-                </li>
-                <li>
-                  <strong>Delegate</strong>: The participants of the council.
-                  Study Guide: Written by the chairs, contains basic information
-                  about the topic and the council.
-                </li>
-                <li>
-                  <strong> Placcards</strong> You raise your placard to make a
-                  point or a motion.
-                </li>
-              </ul>
-            </blockquote>
-
-            <h1>Chapter 2 : What in the MUN?</h1>
-            <h2>Study Guide - What are the contents?</h2>
-            <p>
-              Generally, UN councils can be differed as low-pol and high-pol.
-              Low-pol is usually considered as beginner friendly since there
-              isn’t many politic and contention happen there. Example of low-pol
-              such as UNHCR and UNESCO. As for high-pol council, there are many
-              political things that delegates need to understand. The examples
-              are UNSC and Crisis. However, in some conferences you might be
-              able to find unique councils or international bodies such as
-              African Union (AU), G20, European Union (EU), and Asean. The main
-              thing that delegates need to understand is to make sure their
-              solutions and flow of debate are in line with the mandate of the
-              council that they’re in.
-            </p>
-            <ul>
-              <li>Mandates</li>
-              <ul>
-                <li>
-                  A mandate is the authority to carry out policy or course of
-                  action. The mandate of a council directly influences the
-                  solution that a delegate can bring into the debate, i.e on one
-                  hand a delegate may bring foward an economic sanction as a
-                  part of their solution in one council (UNSC) on the other
-                  hand, a delegate might only be able to propose a
-                  recommendation as their main solution in other.
-                </li>
-              </ul>
-            </ul>
-            <h2>How the MUN?</h2>
-            <ul>
-              <li>
-                Roll Call, all delegates will be called by chair to confirm
-                their presence and voting.
+                <h3 class="text-xl">Roll Call</h3>
+                <p>Where all delegates will be called by chair to confirm their presence and voting.</p>
               </li>
               <li>
-                General Speaker List (GSL), usually consist of 90 seconds speech
-                where delegate can present their opinion regarding the topic.
+                <h3 class="text-xl">General Speaker List (GSL)</h3>
+                <p>Usually consist of 90 seconds speech where delegate can present their opinion regarding the topic.</p>
               </li>
               <li>
-                Formal debate, delegates need to deliver their arguments and
-                propose their solutions regarding spesific motion that has been
-                proposed and voted upon before.
-              </li>
-              <ol>
-                <li>
-                  Moderated Caucus (MC), delegates need to deliver their
-                  argument sequentially and same time constrain for each
-                  speaker.
-                </li>
-                <li>
-                  Unmoderated Caucus (UMC), debate forum where delegates are
-                  free to express their argument without any rules, except to
-                  keep their diplomatic manner and respect each other.
-                </li>
-                <li>
-                  Consultation of The Whole (COTW), delegates need to speak
-                  after one another where the delegate who speak is given the
-                  privilege to choose next delegate to speak. There will no time
-                  constrain for each speaker.
-                </li>
-              </ol>
-              <li>
-                Working Paper (WP), a document which consist of compilation of
-                all issues and solutions from delegates and there’s no strict
-                formatting
-              </li>
-              <li>
-                Draft Resolution (DR), a formal document which consist solutions
-                and will be the final result of conference
-              </li>
-              <li>
-                DR Voting, DR will be presented by sponsor(s) and there will be
-                a QnA session. There’s a possibility of amendments if delegates
-                wanting to change anything in DR. Then, council can proceed to
-                DR Voting as the last stage.
-              </li>
-            </ul>
+                <h3 class="text-xl">Formal Debate</h3>
+                <p>A debate session where delegates need to deliver their arguments and propose their solutions regarding specific motion that has been proposed and voted upon before. In this session, there are several situations:</p>
+                <ul class="list-disc pl-6 py-8">
+                  <li><p><strong>Moderated Caucus (MC):</strong> Where delegates need to deliver their argument sequentially and same time constrain for each speaker.</p></li>
+                  <li><p><strong>Unmoderated Caucus (UMC):</strong> Debate forum where delegates are free to express their argument without any rules, except to keep their diplomatic manner and respect each other.</p></li>
+                  <li><p><strong>Consultation of The Whole (COTW):</strong> When delegates need to speak after one another where the delegate who speak is given the privilege to choose next delegate to speak. There will no time constrain for each speaker.</p></li>
+                </ul>
+                
+                <img src="../assets/mun1014.png" class="w-full rounded-3xl my-12 -left-4" alt="">
 
-            <img src="../assets/flow.png" />
+                <p>During and after the debate, there will be several documents that the delegates need to write and submit, which are:</p>
+                <ul class="list-disc pl-6 pt-8">
+                  <li><p><strong>Working Paper (WP):</strong> a document which consist of compilation of all issues and solutions from delegates and there’s no strict formatting.</p></li>
+                  <li><p><strong>Draft Resolution (DR):</strong> a formal document which consist solutions and will be the final result of conference.</p></li>
+                  <li><p><strong>DR Voting:</strong> DR will be presented by sponsor(s) and there will be a QnA session. There’s a possibility of amendments if delegates wanting to change anything in DR. Then, council can proceed to DR Voting as the last stage.</p></li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-            <h2>Why the MUN?</h2>
-            <p>
-              MUN is aimed to discuss a problem thoroughly from root causes,
-              challenges, status quo, and past actions. From there, delegates
-              are expected to formulate possible solutions that are in line with
-              UN council’s mandate. The solutions will be collected through
-              working paper. Then, it will be finalized and presented as Draft
-              of Resolution as the end result of a conference.
-            </p>
-            <p>
-              If you want to get a more comprehensive explanation, you can join
-              the MUN 101 event on <strong> September 4th 2022</strong>. This is
-              perfect to answer your concerns! We will provide an extensive
-              explanation for the entirety of the MUN procedures. So, what are
-              you waiting for? register yourself for MUN 101 session.
-            </p>
-          </div>
+    <div class="w-full mx-auto my-6 font-bold overflow-scroll">
+      <ul id="timeline" class="steps steps-horizontal w-full">
+        <li class="step step-success"><p class="px-2">Roll Call</p></li>
+        <li class="step step-success"><p class="px-2">GSL</p></li>
+        <li class="step step-success"><p class="px-2">Formal Debate</p></li>
+        <li class="step step-success"><p class="px-2">Working Paper</p></li>
+        <li class="step step-success"><p class="px-2">Draft Resolution</p></li>
+        <li class="step step-success"><p class="px-2">DR Voting</p></li>
+      </ul>
+    </div>
+
+    <div class="pt-12">
+      <h2 class="pt-10 pb-2">
+        Chapter 3: Why MUN?
+      </h2>
+
+      <div class="py-6 text-justify">
+        <p>MUN is aimed to discuss a problem thoroughly from root causes, challenges, status quo, and past actions. From there, delegates are expected to formulate possible solutions that are in line with UN council’s mandate. The solutions will be collected through working paper. Then, it will be finalized and presented as Draft of Resolution as the end result of a conference.</p><br>
+        <p>Through these activities in MUN, you will have <strong>reasons why you should do MUN:</strong></p>
+        <div class="py-6">
+          <ul class="list-disc pl-5" id="no-space">
+            <li><p><strong>Develop soft skills</strong> (debating, negotiating, writing, speaking, leadership, etc.)</p></li>
+            <li><p><strong>Get out of your comfort zone</strong> (especially, if you learn engineering!).</p></li>
+            <li><p><strong>Expand your network</strong> and get to know cool people from other universities.</p></li>
+          </ul>
         </div>
-      </article>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdp0dYyuUGoTjkaCc36ExBYCicDG-tC8UX63qKwAe2SLShk1Q/viewform"
-        target="_blank"
-        class="cursor-pointer hidden sm:flex dark:text-dark-text dark:border-dark-accent group text-md md:text-5xl px-6 py-4 items-center justify-center border-2 rounded-full border-black duration-300 ease-in-out"
-      >
-        Interested?
-        <span
-          class="flex items-center group-hover:pl-4 justify-center opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-3 duration-300 ease-in-out"
-          >Join us here!</span
-        >
-      </a>
-
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdp0dYyuUGoTjkaCc36ExBYCicDG-tC8UX63qKwAe2SLShk1Q/viewform"
-        target="_blank"
-        class="cursor-pointer flex sm:hidden dark:text-dark-text dark:border-dark-accent group text-sm px-6 py-4 items-center justify-center border-2 rounded-full border-black duration-300 ease-in-out"
-      >
-        Join us here!
-      </a>
+        <p>If you want to get a more comprehensive explanation, you can join the MUN 101 event on September 4th 2022. This is perfect to answer your concerns! We will provide an extensive explanation for the entirety of the MUN procedures.</p>
+        <br>
+        <p>So, what are you waiting for? <a href="/register" class="font-bold hover:underline">Register</a> yourself for MUN 101 session.</p>
+      </div>
     </div>
   </div>
 </template>
 
+<style>
+li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#no-space li {
+  margin-bottom: 4px;
+}
+
+#timeline li {
+  margin-bottom: 0px;
+}
+
+</style>
+
 <script>
 export default {
-  name: 'IndexPage',
-  layout: 'blog',
+  // name: 'IndexPage',
+  layout: 'default2',
 
   data() {
     return {
@@ -279,20 +233,20 @@ export default {
     }
   },
 
-  async fetch() {
-    const config = {
-      method: 'get',
-      url: `https://plausible.io/api/v1/stats/aggregate?site_id=itsmunclub.space&period=6mo&filters=event:page==/mun-101`,
-      headers: {
-        Authorization:
-          'Bearer NrWiTfBKhUO75EqPmTeMT4pkLTIaEUaa4ku-PWsWM7e97AI1pW3Vut0_wcRYD8XH',
-      },
-    }
-    await this.$axios(config).then((res) => {
-      this.viewers = res.data.results.visitors.value
-      console.log(res.data.results.visitors.value)
-    })
-  },
+  // async fetch() {
+  //   const config = {
+  //     method: 'get',
+  //     url: `https://plausible.io/api/v1/stats/aggregate?site_id=itsmunclub.space&period=6mo&filters=event:page==/mun-101`,
+  //     headers: {
+  //       Authorization:
+  //         'Bearer NrWiTfBKhUO75EqPmTeMT4pkLTIaEUaa4ku-PWsWM7e97AI1pW3Vut0_wcRYD8XH',
+  //     },
+  //   }
+  //   await this.$axios(config).then((res) => {
+  //     this.viewers = res.data.results.visitors.value
+  //     console.log(res.data.results.visitors.value)
+  //   })
+  // },
   head() {
     return {
       ...this.$SEOMeta({

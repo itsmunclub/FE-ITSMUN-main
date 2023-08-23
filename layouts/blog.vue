@@ -1,11 +1,5 @@
 <template>
-  <div
-    :class="{
-      dark: dark,
-      'bg-[#ECECEC]': !dark,
-    }"
-    class="w-full min-h-screen h-full flex flex-col max-w-[1700px] mx-auto font-montserrat"
-  >
+  <div :class="{dark: dark, 'bg-[#ECECEC]': !dark}" class="w-full min-h-screen h-full flex flex-col max-w-[1700px] mx-auto font-montserrat">
     <div
       class="w-full min-h-screen h-full flex flex-col max-w-[1700px] mx-auto dark:bg-dark-bg"
     >

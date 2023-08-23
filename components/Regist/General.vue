@@ -1,19 +1,19 @@
 <template>
   <div class="w-full px-8">
     <form class="flex-col flex gap-y-3 font-montserrat text-grey" @submit.prevent="submitForm">
-        <input class="w-full rounded-3xl py-3 px-4" type="text" id="name" v-model="form.name" placeholder="Name" required>
-        <input class="w-full rounded-3xl py-3 px-4" type="email" id="email" v-model="form.email" placeholder="Email" required>
-        <input class="w-full rounded-3xl py-3 px-4" type="text" id="studentId" v-model="form.studentId" placeholder="Student ID" required>
-        <input class="w-full rounded-3xl py-3 px-4" type="text" id="lineId" v-model="form.lineId" placeholder="Line ID" required>
-        <input class="w-full rounded-3xl py-3 px-4" type="text" id="phoneNumber" v-model="form.phoneNumber" placeholder="Phone Number" required>
-        <select class="w-full rounded-3xl py-3 px-4 text-gray-400 appearance-none" id="faculty" v-model="form.faculty" required>
+        <input class="w-full rounded-2xl py-3 px-4" type="text" id="name" v-model="form.name" placeholder="Name" required>
+        <input class="w-full rounded-2xl py-3 px-4" type="email" id="email" v-model="form.email" placeholder="Email" required>
+        <input class="w-full rounded-2xl py-3 px-4" type="text" id="studentId" v-model="form.studentId" placeholder="Student ID" required>
+        <input class="w-full rounded-2xl py-3 px-4" type="text" id="lineId" v-model="form.lineId" placeholder="Line ID" required>
+        <input class="w-full rounded-2xl py-3 px-4" type="text" id="phoneNumber" v-model="form.phoneNumber" placeholder="Phone Number" required>
+        <select class="w-full rounded-2xl py-3 px-4 text-gray-400 appearance-none" id="faculty" v-model="form.faculty" required>
             <option value="">Faculty</option>
             <option value="Engineering">Engineering</option>
             <option value="Science">Science</option>
             <option value="Business Administration">Business Administration</option>
             <!-- Add more options as needed -->
         </select>
-        <select class="w-full rounded-3xl py-3 px-4 text-gray-400 appearance-none" id="major" v-model="form.major" required>
+        <select class="w-full rounded-2xl py-3 px-4 text-gray-400 appearance-none" id="major" v-model="form.major" required>
           <option value="">Major</option>
           <option value="Computer Science">Computer Science</option>
           <option value="Electrical Engineering">Electrical Engineering</option>

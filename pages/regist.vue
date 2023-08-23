@@ -1,44 +1,56 @@
 <template>
-  <div>
+  <div class="mx-auto">
     <div class="flex flex-row items-center gap-x-2 pb-10 font-montserrat text-gray font-bold">
       <svg v-if="currentStep !== 1" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.39642 10.1903L1 5.79389L5.39642 1.39746" stroke="black" stroke-width="1.46547" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.39642 10.1903L1 5.79389L5.39642 1.39746" stroke="black" stroke-width="1.46547" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <button v-if="currentStep !== 1" @click="prevStep">{{ previousStepName }}</button>
     </div>
     <!-- Navigation bar -->
     <nav class="mb-16">
-      <ul class="flex flex-row gap-x-2">
-        <li class="flex flex-row items-center gap-x-2 text-[#9A5257] font-montserrat text-grey font-bold text-sm whitespace-nowrap mx-auto" v-for="(stepName, index) in stepNames" :key="index">
+      <ul class="flex flex-row justify-between">
+        <li class="hidden sm:inline scroll-m-8:flex flex-row items-center gap-x-2 text-[#9A5257] font-montserrat text-grey font-bold whitespace-nowrap mx-auto" v-for="(stepName, index) in stepNames" :key="index">
           <!-- Use a method to set the currentStep when a step button is clicked -->
-          <button class="flex flex-row gap-x-2" @click="handleStepClick(index + 1)" :class="{ active: (index + 1) === currentStep }">
-          <div class="w-6 h-6 rounded-full text-[#9A5257] bg-transparent border-[#9A5257] border flex items-center justify-center">
-          {{ index + 1 }}
+          <button class="flex flex-row gap-x-2" @click="goToStep(index + 1)" :class="{ active: (index + 1) === currentStep }">
+          <div class="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6 rounded-full bg-transparent border-[#9A5257] border flex items-center justify-center">
+            <p class="text-[#9A5257] text-xs sm:text-sm lg:text-base">{{ index + 1 }}</p>
           </div>
-            {{ stepName }}
+          <p class="text-[#9A5257] text-xs sm:text-sm lg:text-base">{{ stepName }}</p>
           </button>
-          <svg v-if="index != 3 " height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.3252 5.7609L3.57674 3.50936L1.3252 1.25781" stroke="#9A5257" stroke-width="0.900618" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>          
+          <!-- <svg v-if="index != 3 " height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.3252 5.7609L3.57674 3.50936L1.3252 1.25781" stroke="#9A5257" stroke-width="0.900618" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> -->
+        </li>
+        <li class="sm:hidden w-full">
+          <h4 class="text-center text-[#9A5257]">{{ stepNames[currentStep - 1] }}</h4>
         </li>
       </ul>
     </nav>
     <!-- Render the current step component based on the currentStep value -->
-    <component :is="getCurrentStepComponent" :form="formData" @updateFormData="updateFormData" />
+    <component :is="getCurrentStepComponent" :form="formData" @updateFormData="updateFormData" class="md:max-w-xl md:mx-auto lg:max-w-2xl"/>
 
 
     <!-- Navigation buttons -->
-    <div class="px-8 py-8 font-montserrat text-white font-bold text-xl">
-      <button class="w-full px-8 py-4 rounded-3xl bg-[#9A5257]" v-if="currentStep !== totalSteps" @click="handleNext">Proceed</button>
-      <button class="w-full px-8 py-4 rounded-3xl bg-[#9A5257]" v-else @click="submitForm">Enroll</button>
+    <div class="sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto px-8 py-8 font-montserrat text-white font-bold text-xl">
+      <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-if="currentStep !== totalSteps" @click="nextStep">Proceed</button>
+      <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-else @click="submitForm">Enroll</button>
     </div>
     <!-- Confirmation Modal -->
-    <div v-if="showConfirmationModal" class="min-h-screen w-full absolute bg-red">
-      <div class="modal-content">
-        <p>Proceed to the payment page?</p>
-        <div class="modal-buttons">
-          <button @click="confirmProceed">Yes</button>
-          <button @click="cancelProceed">No</button>
+    <div v-if="showConfirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div class="bg-white p-6 rounded-lg">
+        <p class="mb-4">Are you willing to participate in MUN 101 seminar?</p>
+        <div class="flex justify-center">
+          <button class="px-4 py-2 mr-2 bg-[#4B6587] font-montserrat text-white rounded font-bold hover:bg-blue-600" @click="confirmProceed">Yes</button>
+          <button class="px-4 py-2 bg-[#9A5257] font-montserrat text-white rounded font-bold hover:bg-red-500" @click="cancelProceed">No</button>
+        </div>
+      </div>
+    </div>
+    <!-- isSubmitall -->
+    <div v-if="showComplete" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div class="bg-white p-6 rounded-lg">
+        <p class="mb-4">Please fill all the fields</p>
+        <div>
+          <button class="px-4 py-2 bg-[#9A5257] font-montserrat text-white rounded font-bold hover:bg-red-500" @click="closeMod">Close</button>
         </div>
       </div>
     </div>
@@ -50,22 +62,21 @@ import General from '../components/Regist/General.vue';
 import Prev from '../components/Regist/Prev.vue';
 import Mun from '../components/Regist/Mun.vue';
 import Final from '../components/Regist/Final.vue';
-import Payment from '../components/Regist/Payment.vue';
 
 export default {
+  layout: 'forms',
+
   components: {
     General,
     Prev,
     Mun,
     Final,
-    Payment,
   },
   data() {
     return {
       currentStep: 1,
-      totalSteps: 5,
+      totalSteps: 4,
       formData: {
-        // Initialize form fields with default values if needed
         name: '',
         email: '',
         studentId: '',
@@ -88,13 +99,12 @@ export default {
         modMun:'',
         unmodMun: '',
         drafMun: '',
-        payment: '',
-        paymentProofFile: '',
+        termsAgreed: false,
         final: ''
-        // Add other form fields as needed
       },
-      stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Payment', 'Final'],
+      stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
       showConfirmationModal: false,
+      showComplete: false,
     };
   },
   methods: {
@@ -109,87 +119,76 @@ export default {
         this.currentStep++;
       }
     },
-        isComplete() {
+    isComplete() {
       const requiredFields = [
         'name', 'email', 'studentId', 'lineId', 'phoneNumber', 'faculty', 'major',
         'exp', 'tellExp', 'topic', 'postLink', 'submitEssay',
         'isMun', 'intMun', 'paperMun', 'typeMun', 'roleMun', 'diffMun',
-        'yieldMun', 'modMun', 'unmodMun', 'drafMun'
-        // Add other required fields here
+        'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
       ];
 
       return requiredFields.every(field => !!this.formData[field]);
     },
-
-    handleNext() {
-      if (this.currentStep === 3) { // Adjust the step index accordingly
-        this.showConfirmationModal = true; // Show the confirmation modal
-        console.log(this.showConfirmationModal);
-      } else {
-        this.nextStep();
-      }
-    },
-    handleStepClick(step) {
-      if (step === 4) { // Adjust the step index accordingly
-        this.showConfirmationModal = true; // Show the confirmation modal
-        console.log(this.showConfirmationModal);
-      } else {
-        this.currentStep = step;
-      }
-    },
     confirmProceed() {
       this.showConfirmationModal = false;
-      this.nextStep(); // Proceed to the payment step
+      this.$router.push('/101');
     },
     cancelProceed() {
       // this.currentStep = this.totalSteps; // Redirect to the final step
-      if(this.isComplete()){
-        this.showConfirmationModal = false;
-        this.currentStep = this.totalSteps;
-        console.log(this.formData)
-      } else {
-        this.showConfirmationModal = false;
-        console.log(this.formData)
-      }
+      this.showConfirmationModal = false;
+      this.$router.push('/');
+    },
+    closeMod() {
+      this.showComplete = false;
     },
     prevStep() {
       if (this.currentStep > 1) {
         this.currentStep--;
       }
     },
-    // Method to handle the user's choice in the optional step
-    updateFormData(updatedData) {
-      // Update the formData object with the updated form data from the current step
-      this.formData = { ...this.formData, ...updatedData };
-    },
-    updatePaymentProof(paymentProofFile) {
-      this.formData.form.paymentProofFile = paymentProofFile;
-    },
+    // updateFormData(updatedData) {
+    //   // Update the formData object with the updated form data from the current step
+    //   this.formData = { ...this.formData, ...updatedData };
+    // },
+    // updatePaymentProof(paymentProofFile) {
+    //   this.formData.form.paymentProofFile = paymentProofFile;
+    // },
     submitForm() {
-      // Perform the actual form submission using the formData object
-      console.log(this.formData);
-
-      // After successful submission, you might want to reset the form data and navigate to a success page or display a confirmation message.
-    //   this.formData = {
-    //     exp: '',
-    //     tellExp: '',
-    //     // Reset other form fields as needed
-    //   };
-
-      // Reset the currentStep to the first step to restart the form
-      this.currentStep = 1;
-    },
+      const formData = this.formData;
+      if(this.isComplete()) {
+      // axios.post('/api/submit', formData)
+      //   .then(response => {
+      //     console.log('Form submitted successfully:', response.data);
+          this.showConfirmationModal = true;
+      //   })
+      //   .catch(error => {
+      //     console.error('Error submitting form:', error);
+        // });
+      } else {
+        console.log(this.formData)
+        this.showComplete = true;
+      }
+      // this.showConfirmationModal = true;
+      // axios.post('/api/submit', formData)
+      //   .then(response => {
+      //     console.log('Form submitted successfully:', response.data);
+      //     this.showConfirmationModal = true;
+      //   })
+      //   .catch(error => {
+      //     console.error('Error submitting form:', error);
+      //   });
+  },
     goToStep(step) {
       this.currentStep = step;
     },
   },
   computed: {
     steps() {
-      // Get the list of step names from the component object
+      // steps
       return Object.keys(this.stepNames);
     },
     getCurrentStepComponent() {
-      // Map the current step to the corresponding component
+      // switch case step
       switch (this.currentStep) {
         case 1:
           return 'General';
@@ -198,8 +197,6 @@ export default {
         case 3:
           return 'Mun';
         case 4:
-          return 'Payment';
-        case 5:
           return 'Final';
         default:
           return null;

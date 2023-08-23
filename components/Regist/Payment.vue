@@ -1,10 +1,10 @@
 <template>
   <div class="w-full px-8">
-    <form class="flex-col flex gap-y-5" @submit.prevent="submitForm">
+    <form class="flex-col flex gap-y-6" @submit.prevent="submitForm">
       <!-- Existing payment method dropdown -->
-      <div class="flex-col flex gap-y-3">
+      <div class="flex-col flex gap-y-2">
         <label class="font-montserrat text-grey font-bold" for="payment">Payment Method</label>
-        <select class="w-full rounded-3xl py-3 px-4 appearance-none text-gray-400" id="payment" v-model="form.payment" required>
+        <select class="w-full rounded-2xl py-3 px-4 appearance-none text-gray-400" id="payment" v-model="form.payment" required>
             <option value="">Select</option>
             <option value="Mandiri">Mandiri</option>
             <option value="BCA">BCA</option>

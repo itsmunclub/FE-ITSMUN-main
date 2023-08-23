@@ -12,19 +12,76 @@
   @apply bg-[#ECECEC] dark:bg-dark-bg;
 }
 
+/* width */
+::-webkit-scrollbar {
+    @apply w-1 opacity-20;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    @apply rounded-bl-md rounded-br-md bg-transparent opacity-20;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-dark-bg transition ease-in-out duration-500 bg-opacity-40;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-opacity-100 transition ease-in-out duration-500;
+}
+
+.custom-sidebar-gap {
+  gap-y: 10vh;
+}
+
 h4,
 .h4 {
-  @apply text-sm text-black/50 uppercase dark:text-dark-accent;
+  @apply text-xl font-bold text-[#272F35] dark:text-dark-text;
 }
 
 h5,
 .h5 {
-  @apply text-2xl md:text-2xl font-bold text-[#164249]/75 hover:tracking-widest duration-1000 ease-in-out dark:text-dark-text;
+  @apply text-2xl md:text-2xl font-bold text-[#272F35] hover:tracking-widest duration-1000 ease-in-out dark:text-dark-text;
 }
 
 h3,
 .h3 {
-  @apply text-6xl font-bold  text-[#164249] dark:text-dark-text;
+  @apply text-lg sm:text-xl lg:text-3xl font-bold  text-[#272F35] dark:text-dark-text;
+}
+
+.h3-inverse {
+  @apply text-lg sm:text-xl lg:text-3xl font-bold text-dark-text dark:text-[#272F35];
+}
+
+
+h2,
+.h2 {
+  @apply text-xl sm:text-2xl lg:text-4xl font-bold text-[#272F35] dark:text-dark-text;
+}
+
+h1,
+.h1 {
+  @apply text-2xl sm:text-3xl lg:text-6xl font-bold text-[#272F35] dark:text-dark-text;
+}
+
+p,
+.p {
+  @apply text-[#272F35] dark:text-dark-text text-sm sm:text-base lg:text-lg;
+}
+
+.p-inverse {
+  @apply text-dark-text dark:text-[#272F35];
+}
+
+ul,
+.ul {
+  @apply text-[#272F35] dark:text-dark-text
+}
+
+.ul-inverse {
+  @apply text-dark-text dark:text-[#272F35];
 }
 
 .page-enter-active,

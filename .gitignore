@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 node_modules
 .nuxt/
+=======
+node_modules/
+.nuxt/
+>>>>>>> 47aff8a27798db8de82f1c08fac5b23d034db81c
