@@ -198,7 +198,7 @@
         </div>
         <p>If you want to get a more comprehensive explanation, you can join the MUN 101 event on September 4th 2022. This is perfect to answer your concerns! We will provide an extensive explanation for the entirety of the MUN procedures.</p>
         <br>
-        <p>So, what are you waiting for? <a href="/register" class="font-bold hover:underline">Register</a> yourself for MUN 101 session.</p>
+        <p>So, what are you waiting for? <a href="/101" class="font-bold hover:underline">Register</a> yourself for MUN 101 session.</p>
       </div>
     </div>
   </div>

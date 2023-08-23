@@ -44,7 +44,7 @@
             <NuxtLink to="/about/#" class="whitespace-nowrap font-bold text-sm sm:text-base">About Us</NuxtLink>
           </button>
           <button class="lg:ml-3">
-            <NuxtLink to="/register" class="font-bold text-sm sm:text-base">Register</NuxtLink>
+            <NuxtLink to="/register-member" class="font-bold text-sm sm:text-base">Register</NuxtLink>
           </button>
           <button class="lg:ml-3">
             <NuxtLink to="/mun-101" class="font-bold text-sm sm:text-base">Blog</NuxtLink>

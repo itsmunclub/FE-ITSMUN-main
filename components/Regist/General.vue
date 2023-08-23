@@ -1,5 +1,8 @@
 <template>
   <div class="w-full px-8">
+    <div class="pb-10">
+      <p class="font-semibold">See the guidebook by clicking <a href="http://bit.ly/GGITSMUNTemplate" class="hover:underline hover:text-[#9A5257]">here.</a></p>
+    </div>
     <form class="flex-col flex gap-y-3 font-montserrat text-grey" @submit.prevent="submitForm">
         <input class="w-full rounded-2xl py-3 px-4" type="text" id="name" v-model="form.name" placeholder="Name" required>
         <input class="w-full rounded-2xl py-3 px-4" type="email" id="email" v-model="form.email" placeholder="Email" required>

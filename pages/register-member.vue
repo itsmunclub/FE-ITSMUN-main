@@ -192,7 +192,7 @@ export default {
       //   .catch(error => {
       //     console.error('Error submitting form:', error);
       //   });
-  },
+    },
     goToStep(step) {
       this.currentStep = step;
     },
@@ -217,7 +217,7 @@ export default {
           return null;
       }
     },
-        previousStepName() {
+    previousStepName() {
       if (this.currentStep > 1) {
         return this.stepNames[this.currentStep - 2];
       }
