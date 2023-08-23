@@ -35,6 +35,10 @@
       <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-if="currentStep !== totalSteps" @click="nextStep">Proceed</button>
       <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-else @click="submitForm">Enroll</button>
     </div>
+    
+    <!-- <button class="mx-auto sm:max-w-xl lg:max-w-2xl px-8 py-4 rounded-3xl bg-[#9A5257] text-white font-bold" v-if="currentStep !== totalSteps" @click="handleNext">Proceed</button>
+    <button class="mx-auto sm:max-w-xl lg:max-w-2xl px-8 py-4 rounded-3xl bg-[#9A5257] text-white font-bold" v-else @click="submitForm">Enroll</button> -->
+
     <!-- Confirmation Modal -->
     <div v-if="showConfirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div class="bg-white p-6 rounded-lg">
@@ -66,6 +70,8 @@ import Final from '../components/Regist/Final.vue';
 export default {
   layout: 'forms',
 
+  layout: 'forms',
+
   components: {
     General,
     Prev,
@@ -75,6 +81,7 @@ export default {
   data() {
     return {
       currentStep: 1,
+      totalSteps: 4,
       totalSteps: 4,
       formData: {
         name: '',
@@ -100,10 +107,13 @@ export default {
         unmodMun: '',
         drafMun: '',
         termsAgreed: false,
+        termsAgreed: false,
         final: ''
       },
       stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
+      stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
       showConfirmationModal: false,
+      showComplete: false,
       showComplete: false,
     };
   },
@@ -125,6 +135,7 @@ export default {
         'exp', 'tellExp', 'topic', 'postLink', 'submitEssay',
         'isMun', 'intMun', 'paperMun', 'typeMun', 'roleMun', 'diffMun',
         'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
+        'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
       ];
 
       return requiredFields.every(field => !!this.formData[field]);
@@ -132,9 +143,15 @@ export default {
     confirmProceed() {
       this.showConfirmationModal = false;
       this.$router.push('/101');
+      this.$router.push('/101');
     },
     cancelProceed() {
       // this.currentStep = this.totalSteps; // Redirect to the final step
+      this.showConfirmationModal = false;
+      this.$router.push('/');
+    },
+    closeMod() {
+      this.showComplete = false;
       this.showConfirmationModal = false;
       this.$router.push('/');
     },
@@ -146,6 +163,13 @@ export default {
         this.currentStep--;
       }
     },
+    // updateFormData(updatedData) {
+    //   // Update the formData object with the updated form data from the current step
+    //   this.formData = { ...this.formData, ...updatedData };
+    // },
+    // updatePaymentProof(paymentProofFile) {
+    //   this.formData.form.paymentProofFile = paymentProofFile;
+    // },
     // updateFormData(updatedData) {
     //   // Update the formData object with the updated form data from the current step
     //   this.formData = { ...this.formData, ...updatedData };
@@ -185,9 +209,11 @@ export default {
   computed: {
     steps() {
       // steps
+      // steps
       return Object.keys(this.stepNames);
     },
     getCurrentStepComponent() {
+      // switch case step
       // switch case step
       switch (this.currentStep) {
         case 1:
