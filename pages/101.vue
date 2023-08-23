@@ -43,9 +43,9 @@
         </div>
       </div>
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   import General from '../components/101/General.vue';
   import Payment from '../components/101/Payment.vue';
   
@@ -90,6 +90,14 @@
           this.currentStep++;
         }
       },
+      isComplete() {
+        const requiredFields = [
+          'name', 'email', 'studentId', 'lineId', 'phoneNumber', 'faculty', 'major',
+          'isRegist', 'payment', 'paymentProofFile'
+        ];
+
+        return requiredFields.every(field => !!this.formData[field]);
+      },
       prevStep() {
         if (this.currentStep > 1) {
           this.currentStep--;
@@ -104,9 +112,21 @@
         this.formData.form.paymentProofFile = paymentProofFile;
       },
       submitForm() {
+        let myToast = this.$toasted.show("test");
+
+        const formData = this.formData;
         // Perform the actual form submission using the formData object
         console.log(this.formData);
-  
+
+        if(this.isComplete()) {
+          //API
+          this.$router.push('/');
+          myToast.text("Complete!").goAway(2500);
+        }
+        else {
+          myToast.text("Fill all the fields!").goAway(2500);
+          this.currentStep = 1;
+        }
         // After successful submission, you might want to reset the form data and navigate to a success page or display a confirmation message.
       //   this.formData = {
       //     exp: '',
@@ -115,7 +135,6 @@
       //   };
   
         // Reset the currentStep to the first step to restart the form
-        this.currentStep = 1;
       },
       goToStep(step) {
         this.currentStep = step;
@@ -152,5 +171,5 @@
       },
     },
   };
-  </script>
+</script>
   

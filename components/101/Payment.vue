@@ -16,13 +16,15 @@
         <!-- File input for payment proof -->
         <div class="flex-col flex gap-y-3">
           <label class="font-montserrat text-grey font-bold" for="paymentProof">Upload Payment Proof</label>
-          <input type="file" id="paymentProof" @change="handleFileChange" accept=".jpg, .jpeg, .png, .pdf" />
+          <div class="border w-full bg-[#FFFFFF] rounded-2xl">
+            <input type="file" id="paymentProof" @change="handleFileChange" accept=".jpg, .jpeg, .png, .pdf" class="px-4 py-3 border-none"/>
+          </div>
         </div>
       </form>
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   export default {
     props: ['form'],
     methods: {
@@ -38,4 +40,4 @@
       },
     },
   };
-  </script>
+</script>

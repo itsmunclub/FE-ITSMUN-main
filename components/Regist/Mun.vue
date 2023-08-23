@@ -6,8 +6,9 @@
         <select class="w-full rounded-2xl py-3 px-4 appearance-none text-gray-400" id="isMun" v-model="form.isMun" required>
             <option value="">Select</option>
             <option value="Model United Nations">Model United Nations</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
+            <option value="Model Union Negotiations ">Model Union Negotiations </option>
+            <option value="Model Understanding Network">Model Understanding Network</option>
+            <option value="Model United Nations Conference">Model United Nations Conference</option>
             <!-- Add more options as needed -->
         </select>
       </div>
@@ -15,9 +16,10 @@
         <label class="font-montserrat text-grey font-bold" for="intMun">Which international organization is commonly simulated in MUN conferences?</label>
         <select class="w-full rounded-2xl py-3 px-4 appearance-none text-gray-400" id="intMun" v-model="form.intMun" required>
             <option value="">Select</option>
-            <option value="Model United Nations">Model United Nations</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
+            <option value="European Union">European Union</option>
+            <option value="North Atlantic Treaty Organization">North Atlantic Treaty Organization</option>
+            <option value="United Nations">United Nations</option>
+            <option value="World Trade Organization">World Trade Organization</option>
             <!-- Add more options as needed -->
         </select>
       </div>

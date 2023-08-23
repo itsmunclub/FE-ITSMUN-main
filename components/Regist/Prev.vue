@@ -18,8 +18,10 @@
         <label class="font-montserrat text-grey font-bold" for="topic">What topic did you choose for your video and essay?</label>
        <select class="w-full rounded-2xl py-3 px-4 appearance-none text-gray-400" id="topic" v-model="form.topic" required>
             <option value="">Select</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
-            <option value="Lorem Ipsum">Lorem Ipsum</option>
+            <option value="Universal Healthcare">Universal Healthcare</option>
+            <option value="Governmental and Cultural Censorship on All Modern Media">Governmental and Cultural Censorship on All Modern Media</option>
+            <option value="Criminal Justice Reform">Criminal Justice Reform</option>
+            <option value="Conscription">Conscription</option>
        </select>
       </div>
       <div class="flex-col flex gap-y-2">
@@ -27,7 +29,7 @@
         <input class="w-full rounded-2xl py-3 px-4" type="text" id="postLink" v-model="form.postLink" required>
       </div>
       <div class="flex-col flex gap-y-2">
-        <label class="font-montserrat text-grey font-bold" for="submitEssay">Submit your essay here!</label>
+        <label class="font-montserrat text-grey font-bold" for="submitEssay">Submit your essay link here!</label>
         <input class="w-full rounded-2xl py-3 px-4" type="text" id="submitEssay" v-model="form.submitEssay" required>
       </div>
       <!-- <button type="submit">Submit</button> -->

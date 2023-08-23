@@ -16,7 +16,8 @@
       <!-- File input for payment proof -->
       <div class="flex-col flex gap-y-3">
         <label class="font-montserrat text-grey font-bold" for="paymentProof">Upload Payment Proof</label>
-        <input type="file" id="paymentProof" @change="handleFileChange" accept=".jpg, .jpeg, .png, .pdf" />
+        <!-- <input type="file" id="paymentProof" @change="handleFileChange" accept=".jpg, .jpeg, .png, .pdf" class="file-input file-input-bordered w-full max-w-xs" /> -->
+        <input type="file" class="file-input w-full max-w-xs" />
       </div>
     </form>
   </div>

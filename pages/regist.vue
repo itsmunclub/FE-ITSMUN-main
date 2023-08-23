@@ -164,18 +164,23 @@ export default {
     //   this.formData.form.paymentProofFile = paymentProofFile;
     // },
     submitForm() {
+      let myToast = this.$toasted.show("test");
+
       const formData = this.formData;
       if(this.isComplete()) {
       // axios.post('/api/submit', formData)
       //   .then(response => {
       //     console.log('Form submitted successfully:', response.data);
-          this.showConfirmationModal = true;
       //   })
       //   .catch(error => {
-      //     console.error('Error submitting form:', error);
+        //     console.error('Error submitting form:', error);
         // });
-      } else {
+        myToast.text("Registration complete!").goAway(2500);
+        this.showConfirmationModal = true;
+      } 
+      else {
         console.log(this.formData)
+        myToast.text("Fill all the fields!").goAway(2500);
         this.showComplete = true;
       }
       // this.showConfirmationModal = true;
