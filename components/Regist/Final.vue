@@ -20,14 +20,32 @@
     </p>
     </form>
     <!-- Terms and Conditions Modal -->
-    <div v-if="showTermsModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div class="bg-white p-6 rounded-lg max-w-lg overflow-y-auto">
-        <h2 class="text-lg font-semibold mb-4">Terms and Conditions</h2>
-        <!-- Replace with your terms and conditions content -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div class="mt-6 flex justify-end">
-          <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" @click="closeTermsModal">Close</button>
+    <div v-if="showTermsModal" class="fixed inset-0 flex items-center justify-center bg-[#161F2AE5] bg-opacity-50 overflow-y-scroll overflow-x-auto">
+      <div class="bg-white px-6 sm:py-6 py-10 rounded-lg max-w-lg overflow-y-auto">
+        <div class="flex justify-end">
+          <button class="px-2 py-2" @click="closeTermsModal">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 2L2 24M2 2L24 24" stroke="#4B6587" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
+        <h2 class="text-center text-lg text-[#4B6587] font-bold mb-1">ITS MUN Club</h2>
+          <h2 class="text-center text-lg text-[#9A5257] font-bold mb-4">Terms & Conditions</h2>
+            <h3 class="text-lg font-semibold mb-1">1. Definition</h3>
+              <ul class="list-disc pl-4">
+                <li class="text-sm md:text-base font-normal">The Club: ITS Model United Nations Club (ITS MUN Club) is a student unit activity in ITS.</li>
+                <li class="text-sm md:text-base font-normal">The Club Rules: The rules and regulations of the Club, as amended from time to time. A copy of the Club rules will be supplied to you with your application for membership and further copies will be made available on request.</li>
+                <li class="text-sm md:text-base font-normal">Commitment Period: The minimum term you are committing to remain a member of the Club is 1 year period. </li>
+              </ul>
+            <h3 class="text-lg font-semibold mb-1">2. Membership</h3>
+              <ul class="list-disc pl-4">
+                <li class="text-sm md:text-base font-normal">By signing this Membership Application Form the member agrees to comply with these Terms and Conditions of Membership and the Club Rules.</li>
+                <li class="text-sm md:text-base font-normal">You will only be permitted to use the Club facilities provided your membership is current.</li>
+              </ul>
+            <h3 class="text-lg font-semibold mb-1">3. Duration</h3>
+              <ul class="list-disc pl-4">
+                <li class="text-sm md:text-base font-normal">When you join the Club, you are agreeing to remain a member for the Commitment Period. Your Club membership will continue if you choose to renew your membership.</li>
+              </ul>
       </div>
     </div>
   </div>
