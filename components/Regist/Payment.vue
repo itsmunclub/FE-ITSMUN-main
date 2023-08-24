@@ -4,7 +4,7 @@
       <!-- Existing payment method dropdown -->
       <div class="flex-col flex gap-y-2">
         <label class="font-montserrat text-grey font-bold" for="payment">Payment Method</label>
-        <select class="w-full rounded-2xl py-3 px-4 appearance-none text-gray-400" id="payment" v-model="form.payment" required>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="payment" v-model="form.payment" required>
             <option value="">Select</option>
             <option value="Mandiri">Mandiri</option>
             <option value="BCA">BCA</option>

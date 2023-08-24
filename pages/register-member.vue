@@ -32,8 +32,8 @@
 
     <!-- Navigation buttons -->
     <div class="sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto px-8 py-8 font-montserrat text-white font-bold text-xl">
-      <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-if="currentStep !== totalSteps" @click="nextStep">Proceed</button>
-      <button class="w-full md:mx-auto px-8 py-4 rounded-3xl bg-[#9A5257]" v-else @click="submitForm">Enroll</button>
+      <button class="w-full md:mx-auto px-6 py-3 sm:px-8 sm:py-4 rounded-3xl bg-[#9A5257] hover:bg-[#a35b60]" v-if="currentStep !== totalSteps" @click="nextStep">Proceed</button>
+      <button class="w-full md:mx-auto px-6 py-3 sm:px-8 sm:py-4 rounded-3xl bg-[#9A5257] hover:bg-[#a35b60]" v-else @click="submitForm">Enroll</button>
     </div>
     
     <!-- <button class="mx-auto sm:max-w-xl lg:max-w-2xl px-8 py-4 rounded-3xl bg-[#9A5257] text-white font-bold" v-if="currentStep !== totalSteps" @click="handleNext">Proceed</button>
@@ -92,16 +92,16 @@ export default {
         topic: '',
         postLink: '',
         submitEssay: '',
-        isMun: '',
-        intMun: '',
-        paperMun: '',
-        typeMun: '',
-        roleMun: '',
-        diffMun: '',
-        yieldMun: '',
-        modMun:'',
-        unmodMun: '',
-        drafMun: '',
+        answer1: '',
+        answer2: '',
+        answer3: '',
+        answer4: '',
+        answer5: '',
+        answer6: '',
+        answer7: '',
+        answer8: '',
+        answer9: '',
+        answer10: '',
         termsAgreed: false,
         final: ''
       },
@@ -126,8 +126,8 @@ export default {
       const requiredFields = [
         'name', 'email', 'studentId', 'lineId', 'phoneNumber', 'faculty', 'major',
         'exp', 'tellExp', 'topic', 'postLink', 'submitEssay',
-        'isMun', 'intMun', 'paperMun', 'typeMun', 'roleMun', 'diffMun',
-        'yieldMun', 'modMun', 'unmodMun', 'drafMun', 'termsAgreed', 'final'
+        'answer1', 'answer2', 'answer3', 'answer4', 'answer5', 'answer6',
+        'answer7', 'answer8', 'answer9', 'answer10', 'termsAgreed', 'final'
       ];
 
       return requiredFields.every(field => !!this.formData[field]);
@@ -156,18 +156,115 @@ export default {
     // updatePaymentProof(paymentProofFile) {
     //   this.formData.form.paymentProofFile = paymentProofFile;
     // },
-    // updateFormData(updatedData) {
-    //   // Update the formData object with the updated form data from the current step
-    //   this.formData = { ...this.formData, ...updatedData };
-    // },
-    // updatePaymentProof(paymentProofFile) {
-    //   this.formData.form.paymentProofFile = paymentProofFile;
-    // },
+    updateFormData(updatedData) {
+      // Update the formData object with the updated form data from the current step
+      this.formData = { ...this.formData, ...updatedData };
+    },
+    updatePaymentProof(paymentProofFile) {
+      this.formData.form.paymentProofFile = paymentProofFile;
+    },
     submitForm() {
       let myToast = this.$toasted.show("test");
 
       const formData = this.formData;
       if(this.isComplete()) {
+
+        let parts1 = this.formData.answer1.split('.')
+        let parts2 = this.formData.answer2.split('.')
+        let parts3 = this.formData.answer3.split('.')
+        let parts4 = this.formData.answer4.split('.')
+        let parts5 = this.formData.answer5.split('.')
+        let parts6 = this.formData.answer6.split('.')
+        let parts7 = this.formData.answer7.split('.')
+        let parts8 = this.formData.answer8.split('.')
+        let parts9 = this.formData.answer9.split('.')
+        let parts10 = this.formData.answer10.split('.')
+
+        let body = {
+          nama: this.formData.name,
+          no_telp: this.formData.phoneNumber,
+          email: this.formData.email,
+          nrp: this.formData.studentId,
+          faculty: this.formData.faculty,
+          major: this.formData.major,
+          line_id: this.formData.lineId,
+          answer_previous_experience: [
+            {
+              number: 1,
+              answer: this.formData.exp
+            },
+            {
+              number: 2,
+              answer: this.formData.tellExp
+            },
+            {
+              number: 3,
+              answer: this.formData.topic
+            },
+            {
+              number: 3,
+              answer: this.formData.postLink
+            },
+            {
+              number: 3,
+              answer: this.formData.submitEssay
+            }
+          ],
+          answer_mun_related: [
+            {
+              code: parts1[0],
+              answer: parts1[1],
+              number: 1
+            },
+            {
+              code: parts2[0],
+              answer: parts2[1],
+              number: 2
+            },
+            {
+              code: parts3[0],
+              answer: parts3[1],
+              number: 3
+            },
+            {
+              code: parts4[0],
+              answer: parts4[1],
+              number: 4
+            },
+            {
+              code: parts5[0],
+              answer: parts5[1],
+              number: 5
+            },
+            {
+              code: parts6[0],
+              answer: parts6[1],
+              number: 6
+            },
+            {
+              code: parts7[0],
+              answer: parts7[1],
+              number: 7
+            },
+            {
+              code: parts8[0],
+              answer: parts8[1],
+              number: 8
+            },
+            {
+              code: parts9[0],
+              answer: parts9[1],
+              number: 9
+            },
+            {
+              code: parts10[0],
+              answer: parts10[1],
+              number: 10
+            }
+          ]
+      }
+
+      console.log(body)
       // axios.post('/api/submit', formData)
       //   .then(response => {
       //     console.log('Form submitted successfully:', response.data);
@@ -175,12 +272,12 @@ export default {
       //   .catch(error => {
         //     console.error('Error submitting form:', error);
         // });
-        myToast.text("Registration complete!").goAway(2500);
+        myToast.text("Registration complete!").goAway(3000);
         this.showConfirmationModal = true;
       } 
       else {
         console.log(this.formData)
-        myToast.text("Fill all the fields!").goAway(2500);
+        myToast.text("Fill all the fields!").goAway(3000);
         this.showComplete = true;
       }
       // this.showConfirmationModal = true;
