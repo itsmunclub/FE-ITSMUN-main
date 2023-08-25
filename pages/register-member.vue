@@ -66,6 +66,7 @@ import General from '../components/Regist/General.vue';
 import Prev from '../components/Regist/Prev.vue';
 import Mun from '../components/Regist/Mun.vue';
 import Final from '../components/Regist/Final.vue';
+import axios from 'axios';
 
 export default {
   layout: 'forms',
@@ -163,7 +164,7 @@ export default {
     updatePaymentProof(paymentProofFile) {
       this.formData.form.paymentProofFile = paymentProofFile;
     },
-    submitForm() {
+    async submitForm() {
       let myToast = this.$toasted
 
       if(this.isComplete()) {
@@ -296,7 +297,7 @@ export default {
 
         
         // console.log(body)
-        axios.post('https://its-mun-backend-production.up.railway.app/api/register-mun', body)
+        const res = await axios.post('https://its-mun-backend-production.up.railway.app/api/register-mun', body)
         .then(response => {
           console.log('Form submitted successfully', response.data);
           this.showConfirmationModal = true;

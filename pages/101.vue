@@ -130,7 +130,7 @@
         formData.append('bukti_pembayaran', this.formData.paymentProofFile)
         // const formData = this.formData;
         // Perform the actual form submission using the formData object
-        console.log(this.formData);
+        // console.log(this.formData);
         myToast.show("Registration complete!").goAway(3000)
         this.$router.push('/')
         if(this.isComplete()) {
@@ -143,11 +143,11 @@
           .then((response) => {
             console.log("Form submitted successfully")
             this.$router.push('/')
-            myToast.text("Registration Complete!").goAway(2500);
+            myToast.show("Registration Complete!").goAway(2500);
           })
           .catch((err) => {
             console.log(err)
-            myToast.text("There is an error submitting the form!").goAway(2500);
+            myToast.show("There is an error submitting the form!").goAway(2500);
           })
         }
         else {
