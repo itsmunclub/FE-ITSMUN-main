@@ -133,27 +133,27 @@
         console.log(this.formData);
         myToast.show("Registration complete!").goAway(3000)
         this.$router.push('/')
-        // if(this.isComplete()) {
-        //   //API
-        //   const res = await axios.post("https://its-mun-backend-production.up.railway.app/api/registration-seminar", formData, {
-        //     headers: {
-        //       'Content-Type': 'multipart/form-data'
-        //     }
-        //   })
-        //   .then((response) => {
-        //     console.log(response)
-        //     this.$router.push('/')
-        //     myToast.text("Complete!").goAway(2500);
-        //   })s
-        //   .catch((err) => {
-        //     console.log(err)
-        //     myToast.text("There is an error submitting the form!").goAway(2500);
-        //   })
-        // }
-        // else {
-        //   myToast.text("Fill all the fields!").goAway(2500);
-        //   this.currentStep = 1;
-        // }
+        if(this.isComplete()) {
+          //API
+          const res = await axios.post("https://its-mun-backend-production.up.railway.app/api/registration-seminar", formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          })
+          .then((response) => {
+            console.log("Form submitted successfully")
+            this.$router.push('/')
+            myToast.text("Registration Complete!").goAway(2500);
+          })
+          .catch((err) => {
+            console.log(err)
+            myToast.text("There is an error submitting the form!").goAway(2500);
+          })
+        }
+        else {
+          myToast.text("Fill all the fields!").goAway(2500);
+          this.currentStep = 1;
+        }
         // After successful submission, you might want to reset the form data and navigate to a success page or display a confirmation message.
       //   this.formData = {
       //     exp: '',

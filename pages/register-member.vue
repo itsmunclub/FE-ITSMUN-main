@@ -294,19 +294,18 @@ export default {
           final_answer: this.formData.final
         }
 
-        myToast.show("Registration complete").goAway(3000);
-
-        console.log(body)
-        // axios.post('https://its-mun-backend-production.up.railway.app/api/register-mun', body)
-        // .then(response => {
-        //   console.log('Form submitted successfully:', response.data);
-        // })
-        // .catch(error => {
-        //   console.error('Error submitting form:', error);
-        // });
-        // myToast.text("Registration complete!").goAway(3000);
-        this.showConfirmationModal = true;
-      } 
+        
+        // console.log(body)
+        axios.post('https://its-mun-backend-production.up.railway.app/api/register-mun', body)
+        .then(response => {
+          console.log('Form submitted successfully', response.data);
+          this.showConfirmationModal = true;
+          myToast.show("Registration complete").goAway(3000);
+        })
+        .catch(error => {
+          console.error('Error submitting form:', error);
+        });
+      }
       else {
         console.log(this.formData)
         myToast.text("Fill all the fields!").goAway(3000);
