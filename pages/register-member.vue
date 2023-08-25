@@ -164,9 +164,8 @@ export default {
       this.formData.form.paymentProofFile = paymentProofFile;
     },
     submitForm() {
-      let myToast = this.$toasted.show("test");
+      let myToast = this.$toasted
 
-      const formData = this.formData;
       if(this.isComplete()) {
 
         let parts1 = this.formData.answer1.split('.')
@@ -179,6 +178,11 @@ export default {
         let parts8 = this.formData.answer8.split('.')
         let parts9 = this.formData.answer9.split('.')
         let parts10 = this.formData.answer10.split('.')
+        let parts11 = this.formData.answer11.split('.')
+        let parts12 = this.formData.answer12.split('.')
+        let parts13 = this.formData.answer13.split('.')
+        let parts14 = this.formData.answer14.split('.')
+        let parts15 = this.formData.answer15.split('.')
 
         let body = {
           nama: this.formData.name,
@@ -260,19 +264,47 @@ export default {
               code: parts10[0],
               answer: parts10[1],
               number: 10
+            },
+            {
+              code: parts11[0],
+              answer: parts11[1],
+              number: 11
+            },
+            {
+              code: parts12[0],
+              answer: parts12[1],
+              number: 12
+            },
+            {
+              code: parts13[0],
+              answer: parts13[1],
+              number: 13
+            },
+            {
+              code: parts14[0],
+              answer: parts14[1],
+              number: 14
+            },
+            {
+              code: parts15[0],
+              answer: parts15[1],
+              number: 15
             }
-          ]
-      }
+          ],
+          final_answer: this.formData.final
+        }
 
-      console.log(body)
-      // axios.post('/api/submit', formData)
-      //   .then(response => {
-      //     console.log('Form submitted successfully:', response.data);
-      //   })
-      //   .catch(error => {
-        //     console.error('Error submitting form:', error);
+        myToast.show("Registration complete").goAway(3000);
+
+        console.log(body)
+        // axios.post('https://its-mun-backend-production.up.railway.app/api/register-mun', body)
+        // .then(response => {
+        //   console.log('Form submitted successfully:', response.data);
+        // })
+        // .catch(error => {
+        //   console.error('Error submitting form:', error);
         // });
-        myToast.text("Registration complete!").goAway(3000);
+        // myToast.text("Registration complete!").goAway(3000);
         this.showConfirmationModal = true;
       } 
       else {

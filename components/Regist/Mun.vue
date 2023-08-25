@@ -62,13 +62,13 @@
         </select>
       </div>
       <div class="flex-col flex gap-y-2">
-        <label class="font-montserrat text-grey font-bold" for="drafMun">Who will present the Draft Resolution?</label>
+        <label class="font-montserrat text-grey font-bold" for="drafMun">Which is the correct council flow during conference?</label>
         <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="drafMun" v-model="form.answer7" required>
             <option value="" disabled>Select</option>
-            <option value="a.Chair">Chair</option>
-            <option value="b.Signatories">Signatories</option>
-            <option value="c.Sponsor of the Resolution">Sponsor of the Resolution</option> <!--bener-->
-            <option value="d.Delegates">Delegates</option>
+            <option value="a.Roll call-working paper-general speaker’s list-formal debate-draft resolution-general speaker’s list-formal debate-DR voting">Roll call-working paper-general speaker’s list-formal debate-draft resolution-general speaker’s list-formal debate-DR voting</option>
+            <option value="b.Roll call-formal debate-general speaker’s list-working paper-formal debate-general speaker’s list-draft resolution-DR voting">Roll call-formal debate-general speaker’s list-working paper-formal debate-general speaker’s list-draft resolution-DR voting</option>
+            <option value="c.Roll call-General Speaker List-Formal Debate-Working Paper-General Speaker List-Formal Debate-Draft Resolution-Draft Resolution Voting">Roll call-General Speaker List-Formal Debate-Working Paper-General Speaker List-Formal Debate-Draft Resolution-Draft Resolution Voting</option> <!--bener-->
+            <option value="d.Roll call-general speaker’s list-working paper-formal debate-draft resolution-general speaker’s list-formal debate-DR voting">Roll call-general speaker’s list-working paper-formal debate-draft resolution-general speaker’s list-formal debate-DR voting</option>
         </select>
       </div>
       <div class="flex-col flex gap-y-2">
@@ -99,6 +99,56 @@
             <option value="b.To continue the speech">To continue the speech</option> <!--bener-->
             <option value="c.To questions">To questions</option>
             <option value="d.To other delegates">To other delegates</option>
+        </select>
+      </div>
+      <div class="flex-col flex gap-y-2">
+        <label class="font-montserrat text-grey font-bold" for="modMun">Which motions aren't allowed to be raised after GSL?</label>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="modMun" v-model="form.answer11" required>
+            <option value="" disabled>Select</option>
+            <option value="a.Moderated Caucuses">Moderated Caucuses</option> 
+            <option value="b.Amendments">Amendments</option> <!--bener-->
+            <option value="c.Unmoderated Caucuses">Unmoderated Caucuses</option>
+            <option value="d.Consultation of the Whole">Consultation of the Whole</option>
+        </select>
+      </div>
+      <div class="flex-col flex gap-y-2">
+        <label class="font-montserrat text-grey font-bold" for="modMun">Which of the action that are not recommended to do during Moderated Caucuses?</label>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="modMun" v-model="form.answer12" required>
+            <option value="" disabled>Select</option>
+            <option value="a.Addressing Status Quo">Addressing Status Quo</option> 
+            <option value="b.Discuss about the issue raise">Discuss about the issue raise</option> <!--bener-->
+            <option value="c.Discuss about particular issue">Discuss about particular issue</option>
+            <option value="d.Keeping the certain flow of debate">Keeping the certain flow of debate</option>
+        </select>
+      </div>
+      <div class="flex-col flex gap-y-2">
+        <label class="font-montserrat text-grey font-bold" for="modMun">What is the number of Voting to pass a resolution?</label>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="modMun" v-model="form.answer13" required>
+            <option value="" disabled>Select</option>
+            <option value="a.Two-thirds of the council">Two-thirds of the council</option> 
+            <option value="b.50% of the council">50% of the council</option> <!--bener-->
+            <option value="c.Simple majority">Simple majority</option>
+            <option value="d.60% of the council">60% of the council</option>
+        </select>
+      </div>
+      <div class="flex-col flex gap-y-2">
+        <label class="font-montserrat text-grey font-bold" for="modMun">Who can write Working Paper?</label>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="modMun" v-model="form.answer14" required>
+            <option value="" disabled>Select</option>
+            <option value="a.Note Passer">Note Passer</option> 
+            <option value="b.Delegates">Delegates</option> <!--bener-->
+            <option value="c.Committee">Committee</option>
+            <option value="d.Chair">Chair</option>
+        </select>
+      </div>
+      <div class="flex-col flex gap-y-2">
+        <label class="font-montserrat text-grey font-bold" for="modMun">Who will present the Draft Resolution?</label>
+        <select class="w-full rounded-2xl py-2 px-3 sm:py-3 sm:px-4 appearance-none text-gray-400" id="modMun" v-model="form.answer15" required>
+            <option value="" disabled>Select</option>
+            <option value="a.Chair">Chair</option> 
+            <option value="b.Signatories">Signatories</option> <!--bener-->
+            <option value="c.Chairman">Chairman</option>
+            <option value="d.Sponsor of the Resolution">Sponsor of the Resolution</option>
         </select>
       </div>
     </form>

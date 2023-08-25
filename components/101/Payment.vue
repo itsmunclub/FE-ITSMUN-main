@@ -1,6 +1,6 @@
 <template>
     <div class="w-full px-8">
-      <form class="flex-col flex gap-y-5" @submit.prevent="submitForm">
+      <form class="flex-col flex gap-y-5" @submit.prevent="submitForm" enctype="multipart/form-data">
         <!-- Existing payment method dropdown -->
         <div class="flex-col flex gap-y-3">
           <label class="font-montserrat text-grey font-bold" for="payment">Payment Method</label>

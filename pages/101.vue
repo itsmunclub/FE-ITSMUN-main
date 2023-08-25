@@ -48,6 +48,7 @@
 <script>
   import General from '../components/101/General.vue';
   import Payment from '../components/101/Payment.vue';
+  import axios from 'axios'
   
   export default {
     layout: "forms",
@@ -65,13 +66,14 @@
           name: '',
           email: '',
           studentId: '',
+          university: '',
           lineId: '',
           phoneNumber: '',
           faculty: '',
           major: '',
           isRegist: '',
           payment: '',
-          paymentProofFile: '',
+          paymentProofFile: null,
           // Add other form fields as needed
         },
         stepNames: ['General Information', 'Payment'],
@@ -111,22 +113,47 @@
       updatePaymentProof(paymentProofFile) {
         this.formData.form.paymentProofFile = paymentProofFile;
       },
-      submitForm() {
-        let myToast = this.$toasted.show("test");
-
-        const formData = this.formData;
+      async submitForm() {
+        // let myToast = this.$toasted.show("Registration complete!").goAway(3000);
+        let myToast = this.$toasted;
+        
+        let formData = new FormData()
+        formData.append('name', this.formData.name)
+        formData.append('email', this.formData.email)
+        formData.append('student_id', this.formData.studentId)
+        formData.append('university', this.formData.university)
+        formData.append('faculty', this.formData.faculty)
+        formData.append('major', this.formData.major)
+        formData.append('line_id', this.formData.lineId)
+        formData.append('phone', this.formData.phoneNumber)
+        formData.append('question_seminar', this.formData.isRegist)
+        formData.append('bukti_pembayaran', this.formData.paymentProofFile)
+        // const formData = this.formData;
         // Perform the actual form submission using the formData object
         console.log(this.formData);
-
-        if(this.isComplete()) {
-          //API
-          this.$router.push('/');
-          myToast.text("Complete!").goAway(2500);
-        }
-        else {
-          myToast.text("Fill all the fields!").goAway(2500);
-          this.currentStep = 1;
-        }
+        myToast.show("Registration complete!").goAway(3000)
+        this.$router.push('/')
+        // if(this.isComplete()) {
+        //   //API
+        //   const res = await axios.post("https://its-mun-backend-production.up.railway.app/api/registration-seminar", formData, {
+        //     headers: {
+        //       'Content-Type': 'multipart/form-data'
+        //     }
+        //   })
+        //   .then((response) => {
+        //     console.log(response)
+        //     this.$router.push('/')
+        //     myToast.text("Complete!").goAway(2500);
+        //   })s
+        //   .catch((err) => {
+        //     console.log(err)
+        //     myToast.text("There is an error submitting the form!").goAway(2500);
+        //   })
+        // }
+        // else {
+        //   myToast.text("Fill all the fields!").goAway(2500);
+        //   this.currentStep = 1;
+        // }
         // After successful submission, you might want to reset the form data and navigate to a success page or display a confirmation message.
       //   this.formData = {
       //     exp: '',
