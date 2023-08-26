@@ -132,7 +132,7 @@
 
         if(this.isComplete()) {
           //API
-          const res = await axios.post("https://its-mun-backend-production.up.railway.app/registration-seminar", formData, {
+          const res = await axios.post("https://its-mun-backend-production.up.railway.app/api/registration-seminar", formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
