@@ -113,12 +113,7 @@ export default {
   },
   methods: {
     nextStep() {
-      // Get the current step's form data
       const currentStepData = this.formData;
-      // Validate the data if needed for this step
-      // ...
-
-      // Move to the next step
       if (this.currentStep < this.totalSteps) {
         this.currentStep++;
       }
@@ -150,13 +145,6 @@ export default {
         this.currentStep--;
       }
     },
-    // updateFormData(updatedData) {
-    //   // Update the formData object with the updated form data from the current step
-    //   this.formData = { ...this.formData, ...updatedData };
-    // },
-    // updatePaymentProof(paymentProofFile) {
-    //   this.formData.form.paymentProofFile = paymentProofFile;
-    // },
     updateFormData(updatedData) {
       // Update the formData object with the updated form data from the current step
       this.formData = { ...this.formData, ...updatedData };
@@ -309,18 +297,9 @@ export default {
       }
       else {
         console.log(this.formData)
-        myToast.text("Fill all the fields!").goAway(3000);
+        myToast.show("Fill all the fields!").goAway(3000);
         this.showComplete = true;
       }
-      // this.showConfirmationModal = true;
-      // axios.post('/api/submit', formData)
-      //   .then(response => {
-      //     console.log('Form submitted successfully:', response.data);
-      //     this.showConfirmationModal = true;
-      //   })
-      //   .catch(error => {
-      //     console.error('Error submitting form:', error);
-      //   });
     },
     goToStep(step) {
       this.currentStep = step;

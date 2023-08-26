@@ -128,14 +128,11 @@
         formData.append('phone', this.formData.phoneNumber)
         formData.append('question_seminar', this.formData.isRegist)
         formData.append('bukti_pembayaran', this.formData.paymentProofFile)
-        // const formData = this.formData;
-        // Perform the actual form submission using the formData object
-        // console.log(this.formData);
-        myToast.show("Registration complete!").goAway(3000)
-        this.$router.push('/')
+
+
         if(this.isComplete()) {
           //API
-          const res = await axios.post("https://its-mun-backend-production.up.railway.app/api/registration-seminar", formData, {
+          const res = await axios.post("https://its-mun-backend-production.up.railway.app/registration-seminar", formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -151,17 +148,9 @@
           })
         }
         else {
-          myToast.text("Fill all the fields!").goAway(2500);
+          myToast.show("Fill all the fields!").goAway(2500);
           this.currentStep = 1;
         }
-        // After successful submission, you might want to reset the form data and navigate to a success page or display a confirmation message.
-      //   this.formData = {
-      //     exp: '',
-      //     tellExp: '',
-      //     // Reset other form fields as needed
-      //   };
-  
-        // Reset the currentStep to the first step to restart the form
       },
       goToStep(step) {
         this.currentStep = step;
