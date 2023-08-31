@@ -35,10 +35,9 @@
       <!-- Confirmation Modal -->
       <div v-if="showConfirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <div class="bg-white p-6 rounded-lg">
-          <p class="mb-4">Are you willing to participate in MUN 101 seminar?</p>
+          <p class="mb-4">Thank you for registering for the MUN 101 seminar!</p>
           <div class="flex justify-center">
-            <button class="px-4 py-2 mr-2 bg-[#4B6587] font-montserrat text-white rounded font-bold hover:bg-blue-600" @click="confirmProceed">Yes</button>
-            <button class="px-4 py-2 bg-[#9A5257] font-montserrat text-white rounded font-bold hover:bg-red-500" @click="cancelProceed">No</button>
+            <button class="px-4 py-2 bg-[#9A5257] font-montserrat text-white rounded font-bold hover:bg-red-500" @click="cancelProceed">Back to Home</button>
           </div>
         </div>
       </div>
@@ -77,7 +76,7 @@
           // Add other form fields as needed
         },
         stepNames: ['General Information', 'Payment'],
-        showConfirmationModal: false,
+        showConfirmationModal: true,
       };
     },
     methods: {
