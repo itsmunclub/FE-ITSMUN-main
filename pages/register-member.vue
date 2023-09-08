@@ -40,7 +40,7 @@
     <button class="mx-auto sm:max-w-xl lg:max-w-2xl px-8 py-4 rounded-3xl bg-[#9A5257] text-white font-bold" v-else @click="submitForm">Enroll</button> -->
 
     <!-- Confirmation Modal -->
-    <div v-if="showConfirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div v-if="showConfirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur">
       <div class="bg-white p-6 rounded-lg">
         <p class="mb-4">Thank you for registering!</p>
         <div class="flex justify-center">
@@ -106,7 +106,7 @@ export default {
         final: ''
       },
       stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
-      showConfirmationModal: false,
+      showConfirmationModal: true,
       showComplete: false,
     };
   },
