@@ -106,7 +106,7 @@ export default {
         final: ''
       },
       stepNames: ['General Information', 'Previous Experience', 'MUN Related', 'Final'],
-      showConfirmationModal: false,
+      showConfirmationModal: true,
       showComplete: false,
     };
   },
